@@ -1,0 +1,43 @@
+.background-header {
+  background-color: #000;
+  border-bottom: #ffe600 2px solid;
+}
+
+.bloc {
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.logo {
+  width: 200px;
+}
+
+.search-bar {
+  margin-left: 40px;
+  width: 350px;
+  height: 40px;
+  border-radius: 15px;
+  border: #ffe600 3px solid;
+}
+
+::placeholder {
+  padding-left: 10px;
+  font-size: 20px;
+  color: #ffe600;
+  font-weight: bold;
+  -webkit-text-stroke-width: 0.1px;
+  -webkit-text-stroke-color: orange;
+}
+
+@media (max-width: 700px) {
+  .bloc {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .search-bar {
+    margin-right: 10px;
+  }
+}
