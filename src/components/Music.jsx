@@ -6,7 +6,6 @@ import "./Music.css";
 const Music = () => {
   let { idVideo } = useParams();
   let location = useLocation();
-  console.log(location);
 
   const inputRange = useRef(null);
 
