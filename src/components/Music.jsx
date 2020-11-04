@@ -40,7 +40,6 @@ const Music = () => {
   };
 
   const handleProgress = (state) => {
-    console.log("onProgress", state);
     if (!seeking) {
       setPlayed(state.played);
     }
