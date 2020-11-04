@@ -11,7 +11,6 @@ const List = () => {
 
   const handleSearch = async (inputValue) => {
     const myData = await getYoutube(inputValue);
-    console.log(myData);
     setItems(myData.items);
   };
 
