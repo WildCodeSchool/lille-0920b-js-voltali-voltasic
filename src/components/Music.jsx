@@ -14,7 +14,6 @@ const Music = () => {
   const [volume, setVolume] = useState(0.5);
   const [loop, setLoop] = useState(false);
   const [played, setPlayed] = useState(0);
-  const [loaded, setLoaded] = useState(0);
   const [seeking, setSeeking] = useState(false);
 
   const handlePlayPause = () => {
