@@ -21,7 +21,7 @@ const List = () => {
   }, [location.state.query]);
   return (
     <div>
-      {items.map((item, i) => (
+      {items.map((item) => (
         <div>
           <p>{item.snippet.title}</p>
           <Link
@@ -29,7 +29,7 @@ const List = () => {
               pathname: `/music/${item.id.videoId}`,
               state: { title: item.snippet.title },
             }}
-            key={i}
+            key={item.id.videoId}
           >
             <img
               src={item.snippet.thumbnails.medium.url}

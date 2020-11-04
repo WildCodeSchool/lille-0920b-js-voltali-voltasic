@@ -52,13 +52,13 @@ const Music = () => {
         className="player"
         url={`https://www.youtube.com/watch?v=${idVideo} `}
         config={{ file: { attributes: { disablepictureinpicture: "true" } } }}
-        onDisablePIP={true}
         volume={volume}
         playing={playing}
         loop={loop}
         onProgress={handleProgress}
       />
       <button onClick={handlePlayPause}>{playing ? "Pause" : "Play"}</button>
+      <label htmlFor="volume">Volume</label>
       <input
         type="range"
         min={0}
