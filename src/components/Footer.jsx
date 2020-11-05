@@ -1,19 +1,11 @@
 import React from "react";
-import Pdf from "../Documents/Conditions générales d'utilisation.pdf";
+//import Pdf from "../Documents/Conditions générales d'utilisation.pdf";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-const Container = styled.div`
-  @media screen and (max-width: 450px) {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-  }
-`;
 const Box = styled.div`
   @media screen and (min-width: 450px) {
-    height: 30vh;
+    height: 10vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -37,7 +29,7 @@ const DeskBox = styled.div`
   }
 `;
 
-const Lien = styled.a`
+const Lien = styled(Link)`
   @media screen and (min-width: 450px) {
     font-size: 3vh;
     text-decoration: none;
@@ -57,7 +49,7 @@ const MobilBox = styled.div`
   }
 `;
 
-const LienMob = styled.a`
+const LienMob = styled(Link)`
   @media screen and (min-width: 450px) {
     display: none;
   }
@@ -71,17 +63,17 @@ const Footer = () => {
   return (
     <Box>
       <DeskBox>
-        <Lien href={Pdf}>CGU</Lien>
+        <Lien to="/cgu">CGU</Lien>
 
         <Lien href="Contact">Contact</Lien>
 
         <Lien href="Settings">Settings</Lien>
       </DeskBox>
       <MobilBox>
-        <LienMob href="home">
+        <LienMob to="/">
           <i className="fas fa-home" />
         </LienMob>
-        <LienMob href={Pdf}>
+        <LienMob>
           <i className="far fa-address-book" />
         </LienMob>
         <LienMob to="settings">

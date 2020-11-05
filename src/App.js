@@ -5,8 +5,10 @@ import List from "./components/List";
 import Music from "./components/Music";
 import Nav from "./components/Nav";
 import Home from "./components/Home";
+import Footer from "./components/Footer";
 
 import "./App.css";
+import Cgu from "./components/Cgu";
 class App extends React.Component {
   render() {
     return (
@@ -16,7 +18,9 @@ class App extends React.Component {
           <Route exact path="/" component={Home} />
           <Route path="/list" component={List} />
           <Route path="/music/:idVideo" component={Music} />
+          <Route path="/cgu" component={Cgu} />
         </Switch>
+        <Footer />
       </div>
     );
   }
