@@ -5,30 +5,34 @@ import Search from "./Search";
 
 const NavBar = styled.div`
   display: flex;
+  width: 100vw;
+  height: 10vh;
   justify-content: space-around;
   border-bottom: 2px solid yellow;
   color: #fff;
-  margin: 0 2%;
-  padding: 2%;
-  @media (max-width: 450px) {
+  @media (max-width: 500px) {
     border-bottom: 1px solid yellow;
   }
 `;
 
 const Logo = styled.img`
-  width: 130px;
-  height: auto;
-  @media (max-width: 450px) {
-    max-width: 50px;
+  width: 100%;
+  height: 100%;
+  @media (max-width: 500px) {
+    max-width: 200%;
   }
+`;
+
+const Lien = styled(Link)`
+  height: 100%;
 `;
 
 const Nav = ({ value, change, youtube }) => {
   return (
     <NavBar>
-      <Link to="/">
+      <Lien to="/">
         <Logo src="./logo.svg" />
-      </Link>
+      </Lien>
       <Search value={value} change={change} youtube={youtube} />
     </NavBar>
   );
