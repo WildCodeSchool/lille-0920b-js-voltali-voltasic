@@ -9,7 +9,7 @@ const List = () => {
 
   const location = useLocation();
 
-  const handleSearch = async (inputValue) => {
+  const handleSearch = async inputValue => {
     const myData = await getYoutube(inputValue);
     setItems(myData.items);
   };
@@ -21,7 +21,7 @@ const List = () => {
   }, [location.state.query]);
   return (
     <div>
-      {items.map((item) => (
+      {items.map(item => (
         <div>
           <p>{item.snippet.title}</p>
           <Link
