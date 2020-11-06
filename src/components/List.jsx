@@ -22,14 +22,13 @@ const List = () => {
   return (
     <div>
       {items.map((item) => (
-        <div>
+        <div key={item.id.videoId}>
           <p>{item.snippet.title}</p>
           <Link
             to={{
               pathname: `/music/${item.id.videoId}`,
               state: { title: item.snippet.title },
             }}
-            key={item.id.videoId}
           >
             <img
               src={item.snippet.thumbnails.medium.url}
