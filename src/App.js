@@ -1,6 +1,6 @@
 import React from "react";
-
 import { Switch, Route } from "react-router-dom";
+
 import List from "./components/List";
 import Music from "./components/Music";
 import Nav from "./components/Nav";
@@ -8,6 +8,7 @@ import Home from "./components/Home";
 import Footer from "./components/Footer";
 
 import "./App.css";
+
 class App extends React.Component {
   render() {
     return (
