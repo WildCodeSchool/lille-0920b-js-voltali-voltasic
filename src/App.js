@@ -18,7 +18,6 @@ class App extends React.Component {
           <Route exact path="/" component={Home} />
           <Route path="/list" component={List} />
           <Route path="/music/:idVideo" component={Music} />
-          <Route path="/cgu" component={Cgu} />
         </Switch>
         <Footer />
       </div>
