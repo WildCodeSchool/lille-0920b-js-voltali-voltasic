@@ -6,6 +6,7 @@ const Home = () => {
 
   const trend = async () => {
     const myItems = await getTrend();
+    console.log(myItems);
     setItems(myItems.items);
   };
 
@@ -15,7 +16,16 @@ const Home = () => {
 
   return (
     <div className="home">
-      <h1>Home</h1>
+      <h1>Musiques en tendance</h1>
+      {items.map(item => (
+        <div key={item.id.video}>
+          <p>{item.snippet.title}</p>
+          <img
+            src={item.snippet.thumbnails.medium.url}
+            alt={item.snippet.title}
+          />
+        </div>
+      ))}
     </div>
   );
 };
