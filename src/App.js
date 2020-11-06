@@ -8,7 +8,6 @@ import Home from "./components/Home";
 import Footer from "./components/Footer";
 
 import "./App.css";
-import Cgu from "./components/Cgu";
 class App extends React.Component {
   render() {
     return (

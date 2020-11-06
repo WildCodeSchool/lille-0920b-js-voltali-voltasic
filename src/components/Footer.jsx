@@ -1,5 +1,4 @@
 import React from "react";
-//import Pdf from "../Documents/Conditions générales d'utilisation.pdf";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
