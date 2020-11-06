@@ -1,0 +1,27 @@
+.content-main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: start;
+  margin: 0 20%;
+}
+
+.other {
+  width: 60vw;
+  text-align: start;
+}
+.container-col {
+  display: flex;
+}
+.first-col {
+  width: 50%;
+}
+.second-col {
+  width: 50%;
+  padding-left: 2%;
+}
+
+.second-col > ul {
+  list-style: none;
+  padding: 0 0;
+}

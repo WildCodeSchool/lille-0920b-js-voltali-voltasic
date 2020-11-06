@@ -7,6 +7,7 @@ import Nav from "./components/Nav";
 import Home from "./components/Home";
 
 import "./App.css";
+import AboutUs from "./components/AboutUs";
 class App extends React.Component {
   render() {
     return (
@@ -16,6 +17,7 @@ class App extends React.Component {
           <Route exact path="/" component={Home} />
           <Route path="/list" component={List} />
           <Route path="/music/:idVideo" component={Music} />
+          <Route path="/aboutus" component={AboutUs} />
         </Switch>
       </div>
     );
