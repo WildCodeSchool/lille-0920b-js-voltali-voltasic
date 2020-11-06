@@ -66,18 +66,18 @@ const Footer = () => {
       <DeskBox>
         <Lien to="/cgu">CGU</Lien>
 
-        <Lien href="Contact">Contact</Lien>
+        <Lien to="/">Contact</Lien>
 
-        <Lien href="Settings">Settings</Lien>
+        <Lien to="/">Settings</Lien>
       </DeskBox>
       <MobilBox>
         <LienMob to="/">
           <i className="fas fa-home" />
         </LienMob>
-        <LienMob>
+        <LienMob to="/">
           <i className="far fa-address-book" />
         </LienMob>
-        <LienMob to="settings">
+        <LienMob to="/">
           <i className="fas fa-cog" />
         </LienMob>
       </MobilBox>
