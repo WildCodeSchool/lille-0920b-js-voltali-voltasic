@@ -6,7 +6,6 @@ import { getYoutube } from "../api/youtubeApiCall";
 
 const List = () => {
   const [items, setItems] = useState([]);
-
   const location = useLocation();
 
   const handleSearch = async inputValue => {
