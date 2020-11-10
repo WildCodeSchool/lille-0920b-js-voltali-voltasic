@@ -19,6 +19,7 @@ class App extends React.Component {
           <Route path="/list" component={List} />
           <Route path="/music/:idVideo" component={Music} />
         </Switch>
+
         <Footer />
       </div>
     );
