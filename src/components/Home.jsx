@@ -7,7 +7,7 @@ import { getTrend } from "../api/getTrend";
 import { getChannelPicture } from "../api/getChannelPicture";
 import "./Home.css";
 /*
-const Carousl = styled(Carousel)`
+const Carousl = styled.div`
   text-align: center;
   padding: 2px;
 `;
@@ -23,15 +23,18 @@ const Home = () => {
   const [items, setItems] = useState([]);
   const [IdChannel, setIdChannel] = useState([]);
   const [urlPictureChannel, setUrlPictureChannel] = useState({});
+
   const trend = async () => {
     const myItems = await getTrend();
     //console.log(myItems);
     setItems(myItems.items);
   };
+
   const channelPicture = async id => {
     const picture = await getChannelPicture(id);
     setUrlPictureChannel(picture.items);
   };
+
   useEffect(() => {
     trend();
     items.map(item => {
@@ -40,6 +43,7 @@ const Home = () => {
     channelPicture(IdChannel);
     console.log(IdChannel);
   }, []);
+
   return (
     <div className="home">
       <h1>Musiques en tendance</h1>
