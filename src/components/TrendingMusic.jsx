@@ -5,6 +5,7 @@ import "./Music.css";
 const TrendingMusic = () => {
   let { idVideo } = useParams();
   let location = useLocation();
+
   const inputRange = useRef(null);
   const [playing, setPlaying] = useState(false);
   const [volume, setVolume] = useState(0.5);
@@ -14,23 +15,23 @@ const TrendingMusic = () => {
   const handlePlayPause = () => {
     setPlaying(!playing);
   };
-  const handleVolume = (e) => {
+  const handleVolume = e => {
     setVolume(parseFloat(e.target.value));
   };
   const handleToggleLoop = () => {
     setLoop(!loop);
   };
-  const handleSeekMouseDown = (e) => {
+  const handleSeekMouseDown = e => {
     setSeeking(true);
   };
-  const handleSeekChange = (e) => {
+  const handleSeekChange = e => {
     setPlayed(parseFloat(e.target.value));
   };
-  const handleSeekMouseUp = (e) => {
+  const handleSeekMouseUp = e => {
     setSeeking(false);
     inputRange.current.seekTo(parseFloat(e.target.value));
   };
-  const handleProgress = (state) => {
+  const handleProgress = state => {
     if (!seeking) {
       setPlayed(state.played);
     }

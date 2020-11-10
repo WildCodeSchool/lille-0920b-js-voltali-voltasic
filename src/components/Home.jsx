@@ -1,10 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import Carousel from "react-elastic-carousel";
+
 import { getTrend } from "../api/getTrend";
 import { getChannelPicture } from "../api/getChannelPicture";
-import { Carousel } from "react-responsive-carousel";
 
-/*import " carrousel-réactif / lib / styles / carousel.min.css ";*/
+const breakPoints = [
+  { width: 1, itemsToShow: 1 },
+  { width: 550, itemsToShow: 2, itemsToScroll: 2 },
+  { width: 768, itemsToShow: 3 },
+  { width: 1200, itemsToShow: 4 },
+];
 
 const Home = () => {
   const [items, setItems] = useState([]);
@@ -30,7 +36,7 @@ const Home = () => {
   return (
     <div className="home">
       <h1>Musiques en tendance</h1>
-      <Carousel>
+      <Carousel breakPoints={breakPoints}>
         {items.map(item => (
           <div key={item.id.video}>
             <p>{item.snippet.title}</p>
