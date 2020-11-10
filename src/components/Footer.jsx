@@ -53,9 +53,23 @@ const LienMob = styled(Link)`
   @media screen and (min-width: 500px) {
     display: none;
   }
+
   @media screen and (max-width: 500px) {
     font-size: 3vh;
     color: yellow;
+  }
+`;
+
+const Cgu = styled.a`
+  @media screen and (min-width: 500px) {
+    color: yellow;
+    font-size: 3vh;
+    text-decoration: none;
+  }
+  @media screen and (max-width: 500px) {
+    color: yellow;
+    font-size: 3vh;
+    text-decoration: none;
   }
 `;
 
@@ -63,7 +77,9 @@ const Footer = () => {
   return (
     <Box>
       <DeskBox>
-        <Lien to="/cgu">CGU</Lien>
+        <Cgu href="./cgu.pdf" target="_blank">
+          CGU
+        </Cgu>
 
         <Lien to="/">Contact</Lien>
 
@@ -73,9 +89,9 @@ const Footer = () => {
         <LienMob to="/">
           <i className="fas fa-home" />
         </LienMob>
-        <LienMob to="/">
+        <Cgu href="./cgu.pdf">
           <i className="far fa-address-book" />
-        </LienMob>
+        </Cgu>
         <LienMob to="/">
           <i className="fas fa-cog" />
         </LienMob>
