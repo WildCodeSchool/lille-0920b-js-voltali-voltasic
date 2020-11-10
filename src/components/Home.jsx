@@ -47,9 +47,10 @@ const Home = () => {
   return (
     <div className="home">
       <h1>Musiques en tendance</h1>
-      <Carousel breakPoints={breakPoints}>
-        {items.map(item => (
-          <div key={item.id.video} className="carousel">
+
+      {items.map(item => (
+        <div key={item.id.video} className="carousel">
+          <Carousel breakPoints={breakPoints}>
             <Link
               to={{
                 pathname: `/trendingmusic/${item.id.videoId}`,
@@ -61,10 +62,11 @@ const Home = () => {
                 alt={item.snippet.title}
               />
             </Link>
-            <p>{item.snippet.title}</p>
-          </div>
-        ))}
-      </Carousel>
+          </Carousel>
+          <p>{item.snippet.title}</p>
+        </div>
+      ))}
+
       <h1>Artistes en tendance</h1>
       {items.map(item => (
         <div key={item.id.video}>
