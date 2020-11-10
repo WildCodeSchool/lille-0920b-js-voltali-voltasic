@@ -1,10 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Carousel from "react-elastic-carousel";
+import styled from "styled-components";
 
 import { getTrend } from "../api/getTrend";
 import { getChannelPicture } from "../api/getChannelPicture";
-
+import "./Home.css";
+/*
+const Carousl = styled(Carousel)`
+  text-align: center;
+  padding: 2px;
+`;
+*/
 const breakPoints = [
   { width: 1, itemsToShow: 1 },
   { width: 550, itemsToShow: 2, itemsToScroll: 2 },
@@ -38,8 +45,7 @@ const Home = () => {
       <h1>Musiques en tendance</h1>
       <Carousel breakPoints={breakPoints}>
         {items.map(item => (
-          <div key={item.id.video}>
-            <p>{item.snippet.title}</p>
+          <div key={item.id.video} className="carousel">
             <Link
               to={{
                 pathname: `/trendingmusic/${item.id.videoId}`,
@@ -51,6 +57,7 @@ const Home = () => {
                 alt={item.snippet.title}
               />
             </Link>
+            <p>{item.snippet.title}</p>
           </div>
         ))}
       </Carousel>
