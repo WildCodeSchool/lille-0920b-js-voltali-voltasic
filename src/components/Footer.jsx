@@ -11,7 +11,7 @@ const Box = styled.div`
     border-top: 3px solid yellow;
   }
 
-  @media screen and (max-width: 501px) {
+  @media screen and (max-width: 500px) {
     height: 10vh;
     width: 100%;
     display: flex;
@@ -23,7 +23,7 @@ const DeskBox = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-around;
-  @media screen and (max-width: 501px) {
+  @media screen and (max-width: 500px) {
     display: none;
   }
 `;
@@ -37,7 +37,7 @@ const Lien = styled(Link)`
 `;
 
 const MobilBox = styled.div`
-  @media screen and (max-width: 501px) {
+  @media screen and (max-width: 500px) {
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -53,7 +53,7 @@ const LienMob = styled(Link)`
   @media screen and (min-width: 501px) {
     display: none;
   }
-  @media screen and (max-width: 501px) {
+  @media screen and (max-width: 500px) {
     font-size: 3vh;
     color: yellow;
   }
