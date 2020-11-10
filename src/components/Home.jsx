@@ -15,23 +15,23 @@ const Home = () => {
     //console.log(myItems);
     setItems(myItems.items);
   };
-  const channelPicture = async (id) => {
+  const channelPicture = async id => {
     const picture = await getChannelPicture(id);
     setUrlPictureChannel(picture.items);
   };
   useEffect(() => {
     trend();
-    items.map((item) => {
+    items.map(item => {
       setIdChannel(item.snippet.channelId);
     });
     channelPicture(IdChannel);
     console.log(IdChannel);
   }, []);
   return (
-    <Carousel>
-      <div className="home">
-        <h1>Musiques en tendance</h1>
-        {items.map((item) => (
+    <div className="home">
+      <h1>Musiques en tendance</h1>
+      <Carousel>
+        {items.map(item => (
           <div key={item.id.video}>
             <p>{item.snippet.title}</p>
             <Link
@@ -47,19 +47,19 @@ const Home = () => {
             </Link>
           </div>
         ))}
-        <h1>Artistes en tendance</h1>
-        {items.map((item) => (
-          <div key={item.id.video}>
-            <p>{item.snippet.channelTitle}</p>
-            <img
-              //src={urlPictureChannel[0].snippet.thumbnails.default.url}
-              src=""
-              alt={item.snippet.channelTitle}
-            />
-          </div>
-        ))}
-      </div>
-    </Carousel>
+      </Carousel>
+      <h1>Artistes en tendance</h1>
+      {items.map(item => (
+        <div key={item.id.video}>
+          <p>{item.snippet.channelTitle}</p>
+          <img
+            //src={urlPictureChannel[0].snippet.thumbnails.default.url}
+            src=""
+            alt={item.snippet.channelTitle}
+          />
+        </div>
+      ))}
+    </div>
   );
 };
 export default Home;
