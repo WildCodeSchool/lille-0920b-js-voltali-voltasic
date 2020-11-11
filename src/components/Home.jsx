@@ -27,6 +27,7 @@ const SongTitles = styled.p`
   background-color: rgba(255, 255, 255, 0);
   visibility: hidden;
 `;
+
 const DivImg = styled.div`
   border: 1px solid pink;
   display: flex;
