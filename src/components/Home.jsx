@@ -26,12 +26,6 @@ const DivImg = styled.div`
   flex-direction: column;
   align-items: center;
   position: relative;
-  :hover {
-    SongTitles {
-      visibility: visible;
-      opacity: 1;
-    }
-  }
 `;
 
 const SongTitles = styled.p`
