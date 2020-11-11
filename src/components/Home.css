@@ -11,6 +11,7 @@ button.rec-dot {
   background-color: rgb(235, 184, 16);
   box-shadow: 0 0 1px 1px rgba(255, 255, 255, 1);
   padding: 1px;
+  display: none;
 }
 
 .rec.rec-arrow.rec.rec-arrow-right,

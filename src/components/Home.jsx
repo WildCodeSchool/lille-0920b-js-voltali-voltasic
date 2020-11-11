@@ -21,7 +21,7 @@ const Title = styled.h2`
 `;
 
 const SongTitles = styled.p`
-  color: lightgray;
+  color: yellow;
   text-align: center;
   position: absolute;
   background-color: rgba(255, 255, 255, 0);
@@ -37,7 +37,6 @@ const DivImg = styled.div`
     ${SongTitles} {
       visibility: visible;
       opacity: 1;
-      color: yellow;
     }
   }
 `;
@@ -45,7 +44,6 @@ const DivImg = styled.div`
 const Image = styled.img`
   transition: transform 0.2s;
   :hover {
-    filter: grayscale(100%);
     transform: scale(1.1);
   }
 `;
@@ -68,14 +66,14 @@ const Home = () => {
     setItems(myItems.items);
   };
 
-  const channelPicture = async (id) => {
+  const channelPicture = async id => {
     const picture = await getChannelPicture(id);
     setUrlPictureChannel(picture.items);
   };
 
   useEffect(() => {
     trend();
-    items.map((item) => {
+    items.map(item => {
       setIdChannel(item.snippet.channelId);
     });
     channelPicture(IdChannel);
@@ -86,11 +84,11 @@ const Home = () => {
     <Main>
       <Title>Musiques en tendance</Title>
       <Carousel breakPoints={breakPoints}>
-        {items.map((item) => (
+        {items.map(item => (
           <DivImg key={item.id.video}>
             <Link
               to={{
-                pathname: `/trendingmusic/${item.id.videoId}`,
+                pathname: `/music/${item.id.videoId}`,
                 state: { title: item.snippet.title },
               }}
             >
@@ -105,7 +103,7 @@ const Home = () => {
       </Carousel>
 
       <Title>Artistes en tendance</Title>
-      {items.map((item) => (
+      {items.map(item => (
         <div key={item.id.video}>
           <p>{item.snippet.channelTitle}</p>
           <img
