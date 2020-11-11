@@ -7,7 +7,7 @@ import { getTrend } from "../api/getTrend";
 import { getChannelPicture } from "../api/getChannelPicture";
 import "./Home.css";
 
-const Carousl = styled.div`
+const Div = styled.div`
   text-align: center;
   padding: 2px;
 `;
@@ -30,14 +30,14 @@ const Home = () => {
     setItems(myItems.items);
   };
 
-  const channelPicture = async (id) => {
+  const channelPicture = async id => {
     const picture = await getChannelPicture(id);
     setUrlPictureChannel(picture.items);
   };
 
   useEffect(() => {
     trend();
-    items.map((item) => {
+    items.map(item => {
       setIdChannel(item.snippet.channelId);
     });
     channelPicture(IdChannel);
@@ -47,9 +47,9 @@ const Home = () => {
   return (
     <div className="home">
       <h1>Musiques en tendance</h1>
-      <Carousel>
-        {items.map((item) => (
-          <div key={item.id.video}>
+      <Carousel breakPoints={breakPoints}>
+        {items.map(item => (
+          <Div key={item.id.video}>
             <Link
               to={{
                 pathname: `/trendingmusic/${item.id.videoId}`,
@@ -61,12 +61,13 @@ const Home = () => {
                 alt={item.snippet.title}
               />
             </Link>
-          </div>
+            <p>{item.snippet.title}</p>
+          </Div>
         ))}
       </Carousel>
 
       <h1>Artistes en tendance</h1>
-      {items.map((item) => (
+      {items.map(item => (
         <div key={item.id.video}>
           <p>{item.snippet.channelTitle}</p>
           <img
