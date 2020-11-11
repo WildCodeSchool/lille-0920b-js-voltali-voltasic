@@ -8,11 +8,10 @@ import { getChannelPicture } from "../api/getChannelPicture";
 import "./Home.css";
 
 const Main = styled.div`
-  padding: 2%;
+  padding: 1%;
 `;
 
 const Div = styled.div`
-  padding: 10px;
   text-align: center;
 `;
 
