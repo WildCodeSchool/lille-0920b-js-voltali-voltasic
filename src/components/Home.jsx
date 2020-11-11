@@ -20,6 +20,13 @@ const Title = styled.h2`
   color: white;
 `;
 
+const SongTitles = styled.p`
+  color: lightgray;
+  text-align: center;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0);
+  visibility: hidden;
+`;
 const DivImg = styled.div`
   border: 1px solid pink;
   display: flex;
@@ -28,17 +35,10 @@ const DivImg = styled.div`
   position: relative;
 `;
 
-const SongTitles = styled.p`
-  color: lightgray;
-  text-align: center;
-  position: absolute;
-  background-color: rgba(255, 255, 255, 0);
-  visibility: hidden;
-`;
-
 const Image = styled.img`
   transition: transform 0.2s;
   :hover {
+    filter: grayscale(100%);
     transform: scale(1.1);
   }
 `;
