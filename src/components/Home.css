@@ -21,3 +21,7 @@ button.rec-dot {
   background-color: yellow;
   color: white;
 }
+
+.rec.rec-arrow:disabled {
+  visibility: hidden;
+}
