@@ -20,8 +20,33 @@ const Title = styled.h2`
   color: white;
 `;
 
+const DivImg = styled.div`
+  border: 1px solid pink;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  :hover {
+    SongTitles {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+`;
+
 const SongTitles = styled.p`
   color: lightgray;
+  text-align: center;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0);
+  visibility: hidden;
+`;
+
+const Image = styled.img`
+  transition: transform 0.2s;
+  :hover {
+    transform: scale(1.1);
+  }
 `;
 
 const breakPoints = [
@@ -61,27 +86,27 @@ const Home = () => {
       <Title>Musiques en tendance</Title>
       <Carousel breakPoints={breakPoints}>
         {items.map(item => (
-          <Div key={item.id.video}>
+          <DivImg key={item.id.video}>
             <Link
               to={{
                 pathname: `/trendingmusic/${item.id.videoId}`,
                 state: { title: item.snippet.title },
               }}
             >
-              <img
+              <Image
                 src={item.snippet.thumbnails.medium.url}
                 alt={item.snippet.title}
               />
             </Link>
             <SongTitles>{item.snippet.title}</SongTitles>
-          </Div>
+          </DivImg>
         ))}
       </Carousel>
 
       <Title>Artistes en tendance</Title>
       {items.map(item => (
         <div key={item.id.video}>
-          <SongTitles>{item.snippet.channelTitle}</SongTitles>
+          <p>{item.snippet.channelTitle}</p>
           <img
             //src={urlPictureChannel[0].snippet.thumbnails.default.url}
             src=""
