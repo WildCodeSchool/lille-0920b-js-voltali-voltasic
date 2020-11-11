@@ -7,9 +7,22 @@ import { getTrend } from "../api/getTrend";
 import { getChannelPicture } from "../api/getChannelPicture";
 import "./Home.css";
 
+const Main = styled.div`
+  padding: 2%;
+`;
+
 const Div = styled.div`
+  padding: 10px;
   text-align: center;
-  padding: 2px;
+`;
+
+const Title = styled.h2`
+  font-size: 25pt;
+  color: white;
+`;
+
+const SongTitles = styled.p`
+  color: lightgray;
 `;
 
 const breakPoints = [
@@ -45,8 +58,8 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="home">
-      <h1>Musiques en tendance</h1>
+    <Main className="home">
+      <Title>Musiques en tendance</Title>
       <Carousel breakPoints={breakPoints}>
         {items.map(item => (
           <Div key={item.id.video}>
@@ -61,15 +74,15 @@ const Home = () => {
                 alt={item.snippet.title}
               />
             </Link>
-            <p>{item.snippet.title}</p>
+            <SongTitles>{item.snippet.title}</SongTitles>
           </Div>
         ))}
       </Carousel>
 
-      <h1>Artistes en tendance</h1>
+      <Title>Artistes en tendance</Title>
       {items.map(item => (
         <div key={item.id.video}>
-          <p>{item.snippet.channelTitle}</p>
+          <SongTitles>{item.snippet.channelTitle}</SongTitles>
           <img
             //src={urlPictureChannel[0].snippet.thumbnails.default.url}
             src=""
@@ -77,7 +90,7 @@ const Home = () => {
           />
         </div>
       ))}
-    </div>
+    </Main>
   );
 };
 export default Home;
