@@ -11,10 +11,6 @@ const Main = styled.div`
   padding: 1%;
 `;
 
-const Div = styled.div`
-  text-align: center;
-`;
-
 const Title = styled.h2`
   font-size: 25pt;
   color: white;
@@ -22,10 +18,13 @@ const Title = styled.h2`
 
 const SongTitles = styled.p`
   color: yellow;
+  font-size: 12pt;
+  text-shadow: black 0.1em 0.1em 0.2em;
   text-align: center;
   position: absolute;
   background-color: rgba(255, 255, 255, 0);
   visibility: hidden;
+  margin-top: 25%;
 `;
 
 const DivImg = styled.div`
