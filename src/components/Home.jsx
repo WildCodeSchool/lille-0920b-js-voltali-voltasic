@@ -29,11 +29,17 @@ const SongTitles = styled.p`
 `;
 
 const DivImg = styled.div`
-  border: 1px solid pink;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
+  :hover {
+    ${SongTitles} {
+      visibility: visible;
+      opacity: 1;
+      color: yellow;
+    }
+  }
 `;
 
 const Image = styled.img`
@@ -62,14 +68,14 @@ const Home = () => {
     setItems(myItems.items);
   };
 
-  const channelPicture = async id => {
+  const channelPicture = async (id) => {
     const picture = await getChannelPicture(id);
     setUrlPictureChannel(picture.items);
   };
 
   useEffect(() => {
     trend();
-    items.map(item => {
+    items.map((item) => {
       setIdChannel(item.snippet.channelId);
     });
     channelPicture(IdChannel);
@@ -77,10 +83,10 @@ const Home = () => {
   }, []);
 
   return (
-    <Main className="home">
+    <Main>
       <Title>Musiques en tendance</Title>
       <Carousel breakPoints={breakPoints}>
-        {items.map(item => (
+        {items.map((item) => (
           <DivImg key={item.id.video}>
             <Link
               to={{
@@ -99,7 +105,7 @@ const Home = () => {
       </Carousel>
 
       <Title>Artistes en tendance</Title>
-      {items.map(item => (
+      {items.map((item) => (
         <div key={item.id.video}>
           <p>{item.snippet.channelTitle}</p>
           <img
