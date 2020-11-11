@@ -2,6 +2,8 @@ import { useState, useRef } from "react";
 import ReactPlayer from "react-player";
 import { useLocation, useParams } from "react-router-dom";
 import "./Music.css";
+import styled from "styled-components";
+
 const TrendingMusic = () => {
   let { idVideo } = useParams();
   let location = useLocation();
@@ -15,30 +17,34 @@ const TrendingMusic = () => {
   const handlePlayPause = () => {
     setPlaying(!playing);
   };
-  const handleVolume = e => {
+  const handleVolume = (e) => {
     setVolume(parseFloat(e.target.value));
   };
   const handleToggleLoop = () => {
     setLoop(!loop);
   };
-  const handleSeekMouseDown = e => {
+  const handleSeekMouseDown = (e) => {
     setSeeking(true);
   };
-  const handleSeekChange = e => {
+  const handleSeekChange = (e) => {
     setPlayed(parseFloat(e.target.value));
   };
-  const handleSeekMouseUp = e => {
+  const handleSeekMouseUp = (e) => {
     setSeeking(false);
     inputRange.current.seekTo(parseFloat(e.target.value));
   };
-  const handleProgress = state => {
+  const handleProgress = (state) => {
     if (!seeking) {
       setPlayed(state.played);
     }
   };
+  const Title = styled.h1`
+    font-size: 25pt;
+    color: white;
+  `;
   return (
     <div>
-      <h1>{location.state.title}</h1>
+      <Title>{location.state.title}</Title>
       <ReactPlayer
         ref={inputRange}
         className="player"
