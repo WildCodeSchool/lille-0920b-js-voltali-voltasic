@@ -24,7 +24,14 @@ const SongTitles = styled.p`
   position: absolute;
   background-color: rgba(255, 255, 255, 0);
   visibility: hidden;
-  margin-top: 25%;
+  top: 45%;
+`;
+
+const Image = styled.img`
+  transition: transform 0.2s;
+  :hover {
+    transform: scale(1.1);
+  }
 `;
 
 const DivImg = styled.div`
@@ -37,14 +44,16 @@ const DivImg = styled.div`
       visibility: visible;
       opacity: 1;
     }
+    ${Image} {
+      transform: scale(1.1);
+    }
   }
 `;
 
-const Image = styled.img`
-  transition: transform 0.2s;
-  :hover {
-    transform: scale(1.1);
-  }
+const RouterLink = styled(Link)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const breakPoints = [
@@ -85,7 +94,7 @@ const Home = () => {
       <Carousel breakPoints={breakPoints}>
         {items.map(item => (
           <DivImg key={item.id.video}>
-            <Link
+            <RouterLink
               to={{
                 pathname: `/music/${item.id.videoId}`,
                 state: { title: item.snippet.title },
@@ -96,7 +105,7 @@ const Home = () => {
                 alt={item.snippet.title}
               />
               <SongTitles>{item.snippet.title}</SongTitles>
-            </Link>
+            </RouterLink>
           </DivImg>
         ))}
       </Carousel>
