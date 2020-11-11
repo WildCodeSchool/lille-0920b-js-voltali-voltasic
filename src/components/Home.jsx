@@ -101,18 +101,6 @@ const Home = () => {
           </DivImg>
         ))}
       </Carousel>
-
-      <Title>Artistes en tendance</Title>
-      {items.map(item => (
-        <div key={item.id.video}>
-          <p>{item.snippet.channelTitle}</p>
-          <img
-            //src={urlPictureChannel[0].snippet.thumbnails.default.url}
-            src=""
-            alt={item.snippet.channelTitle}
-          />
-        </div>
-      ))}
     </Main>
   );
 };
