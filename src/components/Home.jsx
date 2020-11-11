@@ -95,8 +95,8 @@ const Home = () => {
                 src={item.snippet.thumbnails.medium.url}
                 alt={item.snippet.title}
               />
+              <SongTitles>{item.snippet.title}</SongTitles>
             </Link>
-            <SongTitles>{item.snippet.title}</SongTitles>
           </DivImg>
         ))}
       </Carousel>
