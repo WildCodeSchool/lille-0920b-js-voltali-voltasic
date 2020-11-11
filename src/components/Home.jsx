@@ -20,20 +20,6 @@ const Title = styled.h2`
   color: white;
 `;
 
-const DivImg = styled.div`
-  border: 1px solid pink;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  :hover {
-    SongTitles {
-      visibility: visible;
-      opacity: 1;
-    }
-  }
-`;
-
 const SongTitles = styled.p`
   color: lightgray;
   text-align: center;
@@ -41,10 +27,25 @@ const SongTitles = styled.p`
   background-color: rgba(255, 255, 255, 0);
   visibility: hidden;
 `;
+const DivImg = styled.div`
+  border: 1px solid pink;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  :hover {
+    ${SongTitles} {
+      visibility: visible;
+      opacity: 1;
+      color: yellow;
+    }
+  }
+`;
 
 const Image = styled.img`
   transition: transform 0.2s;
   :hover {
+    filter: grayscale(100%);
     transform: scale(1.1);
   }
 `;
@@ -67,14 +68,14 @@ const Home = () => {
     setItems(myItems.items);
   };
 
-  const channelPicture = async id => {
+  const channelPicture = async (id) => {
     const picture = await getChannelPicture(id);
     setUrlPictureChannel(picture.items);
   };
 
   useEffect(() => {
     trend();
-    items.map(item => {
+    items.map((item) => {
       setIdChannel(item.snippet.channelId);
     });
     channelPicture(IdChannel);
@@ -85,7 +86,7 @@ const Home = () => {
     <Main className="home">
       <Title>Musiques en tendance</Title>
       <Carousel breakPoints={breakPoints}>
-        {items.map(item => (
+        {items.map((item) => (
           <DivImg key={item.id.video}>
             <Link
               to={{
@@ -104,7 +105,7 @@ const Home = () => {
       </Carousel>
 
       <Title>Artistes en tendance</Title>
-      {items.map(item => (
+      {items.map((item) => (
         <div key={item.id.video}>
           <p>{item.snippet.channelTitle}</p>
           <img
