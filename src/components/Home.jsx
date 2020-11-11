@@ -24,7 +24,14 @@ const SongTitles = styled.p`
   position: absolute;
   background-color: rgba(255, 255, 255, 0);
   visibility: hidden;
-  margin-top: 25%;
+  top: 45%;
+`;
+
+const Image = styled.img`
+  transition: transform 0.2s;
+  :hover {
+    transform: scale(1.1);
+  }
 `;
 
 const DivImg = styled.div`
@@ -37,14 +44,16 @@ const DivImg = styled.div`
       visibility: visible;
       opacity: 1;
     }
+    ${Image} {
+      transform: scale(1.1);
+    }
   }
 `;
 
-const Image = styled.img`
-  transition: transform 0.2s;
-  :hover {
-    transform: scale(1.1);
-  }
+const RouterLink = styled(Link)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const breakPoints = [
@@ -65,14 +74,14 @@ const Home = () => {
     setItems(myItems.items);
   };
 
-  const channelPicture = async id => {
+  const channelPicture = async (id) => {
     const picture = await getChannelPicture(id);
     setUrlPictureChannel(picture.items);
   };
 
   useEffect(() => {
     trend();
-    items.map(item => {
+    items.map((item) => {
       setIdChannel(item.snippet.channelId);
     });
     channelPicture(IdChannel);
@@ -83,9 +92,9 @@ const Home = () => {
     <Main>
       <Title>Musiques en tendance</Title>
       <Carousel breakPoints={breakPoints}>
-        {items.map(item => (
+        {items.map((item) => (
           <DivImg key={item.id.video}>
-            <Link
+            <RouterLink
               to={{
                 pathname: `/music/${item.id.videoId}`,
                 state: { title: item.snippet.title },
@@ -95,8 +104,8 @@ const Home = () => {
                 src={item.snippet.thumbnails.medium.url}
                 alt={item.snippet.title}
               />
-            </Link>
-            <SongTitles>{item.snippet.title}</SongTitles>
+              <SongTitles>{item.snippet.title}</SongTitles>
+            </RouterLink>
           </DivImg>
         ))}
       </Carousel>
