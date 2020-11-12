@@ -5,7 +5,6 @@ import List from "./components/List";
 import Music from "./components/Music";
 import Nav from "./components/Nav";
 import Home from "./components/homepage/Home";
-//import TrendingMusic from "./components/TrendingMusic";
 import Footer from "./components/Footer";
 
 import "./App.css";
