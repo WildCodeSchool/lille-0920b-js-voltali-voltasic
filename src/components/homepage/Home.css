@@ -1,0 +1,32 @@
+button.rec-dot {
+  background-color: rgb(235, 184, 16);
+  box-shadow: 0 0 1px 3px rgb(255, 255, 255);
+}
+button.rec-dot:hover,
+button.rec-dot:active,
+button.rec-dot:focus {
+  box-shadow: 0 0 1px 3px yellow;
+}
+button.rec-dot {
+  background-color: rgb(235, 184, 16);
+  box-shadow: 0 0 1px 1px rgba(255, 255, 255, 1);
+  padding: 1px;
+  display: none;
+}
+
+.rec.rec-arrow.rec.rec-arrow-right,
+.rec.rec-arrow.rec.rec-arrow-left {
+  background-color: rgba(253, 250, 250, 0.2);
+  color: yellow;
+  border-radius: 5px;
+}
+
+.rec.rec-arrow.rec.rec-arrow-right:hover,
+.rec.rec-arrow.rec.rec-arrow-left:hover {
+  background-color: yellow;
+  color: grey;
+}
+
+.rec.rec-arrow:disabled {
+  visibility: hidden;
+}
