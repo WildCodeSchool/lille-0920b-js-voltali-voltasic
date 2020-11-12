@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
+import { getYoutube } from "../api/youtubeApiCall";
+
 const SearchMain = styled.div`
   display: flex;
   align-items: center;
@@ -33,30 +35,29 @@ const SearchBar = styled.input`
 `;
 
 const Button = styled.button`
-  color: #fff;
-  border: 0;
-  width: 10%;
-  cursor: pointer;
+  display: none;
 `;
 
 const Search = () => {
   const [value, setValue] = useState("");
 
-  const handleChangeValue = (event) => {
+  const handleChangeValue = event => {
     setValue(event.target.value);
   };
 
   return (
     <SearchMain>
-      <SearchBar value={value} onChange={handleChangeValue} />
-      <Link
-        to={{
-          pathname: "/List",
-          state: { query: value },
-        }}
-      >
-        <Button>ALLEZ</Button>
-      </Link>
+      <form onChange={getYoutube}>
+        <SearchBar value={value} onChange={handleChangeValue} />
+        <Link
+          to={{
+            pathname: "/List",
+            state: { query: value },
+          }}
+        >
+          <Button></Button>
+        </Link>
+      </form>
     </SearchMain>
   );
 };
