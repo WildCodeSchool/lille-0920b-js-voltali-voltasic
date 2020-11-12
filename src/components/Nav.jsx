@@ -19,12 +19,13 @@ const Logo = styled.img`
   width: 100%;
   height: 100%;
   @media (max-width: 500px) {
-    max-width: 200%;
+    max-width: 100%;
   }
 `;
 
 const Lien = styled(Link)`
   height: 100%;
+  width: 20%;
 `;
 
 const Nav = ({ value, change, youtube }) => {

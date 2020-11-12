@@ -13,7 +13,7 @@ const SearchMain = styled.div`
     width: 50%;
   }
   @media (max-width: 500px) {
-    width: 100%;
+    width: 90%;
     justify-content: flex-end;
     padding-right: 0%;
   }
