@@ -41,6 +41,346 @@
         "liveBroadcastContent": "none",
         "publishTime": "2020-08-15T14:53:51Z"
       }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "YW5BxTFAUkejmKlrK-yyIMLNu6c",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "-CVn3-3g_BI"
+      },
+      "snippet": {
+        "publishedAt": "2020-08-15T14:53:51Z",
+        "channelId": "UC-GI5LST5T3Gw93yZxjdFaw",
+        "title": "Bande Organisée - Sch / Kofs / Jul / Naps / Soso maness / Elams / Solda / Houari // Clip Officiel",
+        "description": "Ceci est une œuvre de fiction, qui comporte des scènes susceptibles d'heurter la sensibilité du jeune public. Toute similitude avec des personnes ou des ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/-CVn3-3g_BI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/-CVn3-3g_BI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/-CVn3-3g_BI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "DORETDEPLATINE",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-08-15T14:53:51Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "YW5BxTFAUkejmKlrK-yyIMLNu6c",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "-CVn3-3g_BI"
+      },
+      "snippet": {
+        "publishedAt": "2020-08-15T14:53:51Z",
+        "channelId": "UC-GI5LST5T3Gw93yZxjdFaw",
+        "title": "Bande Organisée - Sch / Kofs / Jul / Naps / Soso maness / Elams / Solda / Houari // Clip Officiel",
+        "description": "Ceci est une œuvre de fiction, qui comporte des scènes susceptibles d'heurter la sensibilité du jeune public. Toute similitude avec des personnes ou des ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/-CVn3-3g_BI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/-CVn3-3g_BI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/-CVn3-3g_BI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "DORETDEPLATINE",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-08-15T14:53:51Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "YW5BxTFAUkejmKlrK-yyIMLNu6c",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "-CVn3-3g_BI"
+      },
+      "snippet": {
+        "publishedAt": "2020-08-15T14:53:51Z",
+        "channelId": "UC-GI5LST5T3Gw93yZxjdFaw",
+        "title": "Bande Organisée - Sch / Kofs / Jul / Naps / Soso maness / Elams / Solda / Houari // Clip Officiel",
+        "description": "Ceci est une œuvre de fiction, qui comporte des scènes susceptibles d'heurter la sensibilité du jeune public. Toute similitude avec des personnes ou des ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/-CVn3-3g_BI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/-CVn3-3g_BI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/-CVn3-3g_BI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "DORETDEPLATINE",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-08-15T14:53:51Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "YW5BxTFAUkejmKlrK-yyIMLNu6c",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "-CVn3-3g_BI"
+      },
+      "snippet": {
+        "publishedAt": "2020-08-15T14:53:51Z",
+        "channelId": "UC-GI5LST5T3Gw93yZxjdFaw",
+        "title": "Bande Organisée - Sch / Kofs / Jul / Naps / Soso maness / Elams / Solda / Houari // Clip Officiel",
+        "description": "Ceci est une œuvre de fiction, qui comporte des scènes susceptibles d'heurter la sensibilité du jeune public. Toute similitude avec des personnes ou des ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/-CVn3-3g_BI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/-CVn3-3g_BI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/-CVn3-3g_BI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "DORETDEPLATINE",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-08-15T14:53:51Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "YW5BxTFAUkejmKlrK-yyIMLNu6c",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "-CVn3-3g_BI"
+      },
+      "snippet": {
+        "publishedAt": "2020-08-15T14:53:51Z",
+        "channelId": "UC-GI5LST5T3Gw93yZxjdFaw",
+        "title": "Bande Organisée - Sch / Kofs / Jul / Naps / Soso maness / Elams / Solda / Houari // Clip Officiel",
+        "description": "Ceci est une œuvre de fiction, qui comporte des scènes susceptibles d'heurter la sensibilité du jeune public. Toute similitude avec des personnes ou des ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/-CVn3-3g_BI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/-CVn3-3g_BI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/-CVn3-3g_BI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "DORETDEPLATINE",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-08-15T14:53:51Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "YW5BxTFAUkejmKlrK-yyIMLNu6c",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "-CVn3-3g_BI"
+      },
+      "snippet": {
+        "publishedAt": "2020-08-15T14:53:51Z",
+        "channelId": "UC-GI5LST5T3Gw93yZxjdFaw",
+        "title": "Bande Organisée - Sch / Kofs / Jul / Naps / Soso maness / Elams / Solda / Houari // Clip Officiel",
+        "description": "Ceci est une œuvre de fiction, qui comporte des scènes susceptibles d'heurter la sensibilité du jeune public. Toute similitude avec des personnes ou des ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/-CVn3-3g_BI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/-CVn3-3g_BI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/-CVn3-3g_BI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "DORETDEPLATINE",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-08-15T14:53:51Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "YW5BxTFAUkejmKlrK-yyIMLNu6c",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "-CVn3-3g_BI"
+      },
+      "snippet": {
+        "publishedAt": "2020-08-15T14:53:51Z",
+        "channelId": "UC-GI5LST5T3Gw93yZxjdFaw",
+        "title": "Bande Organisée - Sch / Kofs / Jul / Naps / Soso maness / Elams / Solda / Houari // Clip Officiel",
+        "description": "Ceci est une œuvre de fiction, qui comporte des scènes susceptibles d'heurter la sensibilité du jeune public. Toute similitude avec des personnes ou des ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/-CVn3-3g_BI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/-CVn3-3g_BI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/-CVn3-3g_BI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "DORETDEPLATINE",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-08-15T14:53:51Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "YW5BxTFAUkejmKlrK-yyIMLNu6c",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "-CVn3-3g_BI"
+      },
+      "snippet": {
+        "publishedAt": "2020-08-15T14:53:51Z",
+        "channelId": "UC-GI5LST5T3Gw93yZxjdFaw",
+        "title": "Bande Organisée - Sch / Kofs / Jul / Naps / Soso maness / Elams / Solda / Houari // Clip Officiel",
+        "description": "Ceci est une œuvre de fiction, qui comporte des scènes susceptibles d'heurter la sensibilité du jeune public. Toute similitude avec des personnes ou des ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/-CVn3-3g_BI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/-CVn3-3g_BI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/-CVn3-3g_BI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "DORETDEPLATINE",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-08-15T14:53:51Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "YW5BxTFAUkejmKlrK-yyIMLNu6c",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "-CVn3-3g_BI"
+      },
+      "snippet": {
+        "publishedAt": "2020-08-15T14:53:51Z",
+        "channelId": "UC-GI5LST5T3Gw93yZxjdFaw",
+        "title": "Bande Organisée - Sch / Kofs / Jul / Naps / Soso maness / Elams / Solda / Houari // Clip Officiel",
+        "description": "Ceci est une œuvre de fiction, qui comporte des scènes susceptibles d'heurter la sensibilité du jeune public. Toute similitude avec des personnes ou des ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/-CVn3-3g_BI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/-CVn3-3g_BI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/-CVn3-3g_BI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "DORETDEPLATINE",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-08-15T14:53:51Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "YW5BxTFAUkejmKlrK-yyIMLNu6c",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "-CVn3-3g_BI"
+      },
+      "snippet": {
+        "publishedAt": "2020-08-15T14:53:51Z",
+        "channelId": "UC-GI5LST5T3Gw93yZxjdFaw",
+        "title": "Bande Organisée - Sch / Kofs / Jul / Naps / Soso maness / Elams / Solda / Houari // Clip Officiel",
+        "description": "Ceci est une œuvre de fiction, qui comporte des scènes susceptibles d'heurter la sensibilité du jeune public. Toute similitude avec des personnes ou des ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/-CVn3-3g_BI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/-CVn3-3g_BI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/-CVn3-3g_BI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "DORETDEPLATINE",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-08-15T14:53:51Z"
+      }
     }
   ]
 }
