@@ -14,7 +14,9 @@ const breakPoints = [
 const SweetMusics = () => {
   const [items, setItems] = useState([]);
   const [IdChannel, setIdChannel] = useState([]);
-  const [searchValue, setSearchValue] = useState("sweet+musics+love+musics");
+  const [searchValue, setSearchValue] = useState(
+    "ambiance+musics+sweet+musics+love+musics"
+  );
 
   const trend = async (value) => {
     const myItems = await getTrend(value);
