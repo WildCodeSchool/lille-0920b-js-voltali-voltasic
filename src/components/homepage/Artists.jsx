@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
+import axios from "axios";
 import Carousel from "react-elastic-carousel";
 
-import { getTrend } from "../../api/getTrend";
-import { getChannelPicture } from "../../api/getChannelPicture";
-import { Main, Title, SongTitles, Img, DivImg, RouterLink } from "./Carousel";
+import mock from "./../../api/mock.json";
+import { Main, Title, SongTitles, Img, DivImg } from "./Carousel";
 
 const breakPoints = [
   { width: 1, itemsToShow: 1 },
@@ -13,48 +13,29 @@ const breakPoints = [
 ];
 
 const TrendArtists = () => {
-  const [items, setItems] = useState([]);
-  const [IdChannel, setIdChannel] = useState([]);
-  const [searchValue, setSearchValue] = useState("musique+tendance+fr");
-  const [urlPictureChannel, setUrlPictureChannel] = useState({});
+  const [data, setData] = useState([]);
 
-  const channelPicture = async id => {
-    const picture = await getChannelPicture(id);
-    setUrlPictureChannel(picture.items);
-  };
-
-  const trend = async value => {
-    const myItems = await getTrend(value);
-    setItems(myItems.items);
+  const getMock = () => {
+    setData(mock.items);
+    console.log(data);
+    return mock.items;
   };
 
   useEffect(() => {
-    trend(searchValue);
-    channelPicture(IdChannel);
-    console.log(IdChannel);
-    items.map(item => {
-      setIdChannel(item.snippet.channelId);
-    });
+    getMock();
   }, []);
 
   return (
     <Main>
       <Title>Artistes du moment</Title>
       <Carousel breakPoints={breakPoints}>
-        {items.map(item => (
+        {data.map(item => (
           <DivImg key={item.id.video}>
-            <RouterLink
-              to={{
-                pathname: `/music/${item.id.videoId}`,
-                state: { title: item.snippet.title },
-              }}
-            >
-              <Img
-                src={urlPictureChannel[0].snippet.thumbnails.default.url}
-                alt={item.snippet.channelTitle}
-              />
-              <SongTitles>{item.snippet.channelTitle}</SongTitles>
-            </RouterLink>
+            <Img
+              src={item.snippet.thumbnails.channelPic.url}
+              alt={item.snippet.channelTitle}
+            />
+            <SongTitles>{item.snippet.channelTitle}</SongTitles>
           </DivImg>
         ))}
       </Carousel>

@@ -22,7 +22,8 @@ export const SongTitles = styled.p`
 `;
 
 export const Img = styled.img`
-  clip-path: ellipse(30% 50%);
+  width: 150px;
+  clip-path: ellipse(50% 50%);
 `;
 
 export const Image = styled.img`
