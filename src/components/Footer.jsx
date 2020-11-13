@@ -77,7 +77,9 @@ const Footer = () => {
   return (
     <Box>
       <DeskBox>
-        <Cgu href="./cgu.pdf">CGU</Cgu>
+        <Cgu href="./cgu.pdf" target="_blank">
+          CGU
+        </Cgu>
 
         <Lien to="/">Contact</Lien>
 
