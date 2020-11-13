@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import Carousel from "react-elastic-carousel";
 
 import mock from "./../../api/mock.json";
@@ -17,7 +16,6 @@ const TrendArtists = () => {
 
   const getMock = () => {
     setData(mock.items);
-    console.log(data);
     return mock.items;
   };
 
