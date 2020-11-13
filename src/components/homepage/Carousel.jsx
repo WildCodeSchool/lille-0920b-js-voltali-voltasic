@@ -21,6 +21,10 @@ export const SongTitles = styled.p`
   top: 45%;
 `;
 
+export const Img = styled.img`
+  clip-path: ellipse(30% 50%);
+`;
+
 export const Image = styled.img`
   transition: transform 0.2s;
   :hover {
