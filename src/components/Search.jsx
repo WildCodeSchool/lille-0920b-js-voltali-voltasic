@@ -38,16 +38,20 @@ const Button = styled.button`
   display: none;
 `;
 
+const Form = styled.form`
+  width: 100%;
+`;
+
 const Search = () => {
   const [value, setValue] = useState("");
 
-  const handleChangeValue = event => {
+  const handleChangeValue = (event) => {
     setValue(event.target.value);
   };
 
   return (
     <SearchMain>
-      <form onChange={getYoutube}>
+      <Form onChange={getYoutube}>
         <SearchBar value={value} onChange={handleChangeValue} />
         <Link
           to={{
@@ -57,7 +61,7 @@ const Search = () => {
         >
           <Button></Button>
         </Link>
-      </form>
+      </Form>
     </SearchMain>
   );
 };
