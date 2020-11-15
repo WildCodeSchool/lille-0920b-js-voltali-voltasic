@@ -15,8 +15,6 @@ export const SongTitles = styled.p`
   font-size: 12pt;
   text-shadow: black 0.1em 0.1em 0.2em;
   text-align: center;
-  border: 1px solid red;
-  width: 90%;
   visibility: hidden;
 `;
 
@@ -28,27 +26,34 @@ export const Img = styled.img`
 export const Image = styled.img``;
 
 //tesssssssssst
+export const Ok = styled.div`
+  border: 1px solid purple;
+`;
 export const Filter = styled.div`
   position: absolute;
-  width: 100vw;
-  height: 70vh;
+  border: 1px solid green;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
   visibility: hidden;
-  background-color: rgba(0, 0, 0, 0.5);
 `;
 export const I = styled.i`
   position: absolute;
   background-color: rgba(0, 0, 0, 0);
   text-align: center;
   color: white;
+  text-shadow: black 0.1em 0.1em 0.6em;
   font-size: 25pt;
+  top: 45%;
   visibility: hidden;
 `;
 
 export const DivImg = styled.div`
+  border: 1px solid red;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
   :hover {
     ${Filter}, ${I}, ${SongTitles} {
       visibility: visible;

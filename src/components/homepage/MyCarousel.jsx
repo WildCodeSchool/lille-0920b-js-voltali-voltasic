@@ -10,6 +10,7 @@ import {
   Image,
   I,
   Filter,
+  Ok,
 } from "./CarouselStyled";
 
 import { getYoutube } from "../../api/youtubeApiCall";
@@ -38,22 +39,17 @@ const MyCarousel = ({ category }) => {
       <Title>{category.title}</Title>
       <Carousel breakPoints={breakPoints}>
         {items.map(item => (
-          <DivImg key={item.id.video}>
-            <RouterLink
-              to={{
-                pathname: `/music/${item.id.videoId}`,
-                state: { title: item.snippet.title },
-              }}
-            >
+          <Ok>
+            <DivImg key={item.id.video}>
               <Image
                 src={item.snippet.thumbnails.medium.url}
                 alt={item.snippet.title}
               />
               <Filter></Filter>
               <I className="fas fa-play"></I>
-            </RouterLink>
+            </DivImg>
             <SongTitles>{item.snippet.title}</SongTitles>
-          </DivImg>
+          </Ok>
         ))}
       </Carousel>
     </Main>
