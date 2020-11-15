@@ -31,7 +31,7 @@ export const Image = styled.img``;
 export const Filter = styled.div`
   position: absolute;
   width: 100vw;
-  height: 100vh;
+  height: 70vh;
   visibility: hidden;
   background-color: rgba(0, 0, 0, 0.5);
 `;
