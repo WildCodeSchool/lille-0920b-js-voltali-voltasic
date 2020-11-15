@@ -12,8 +12,6 @@ import {
 
 import { getYoutube } from "../../api/youtubeApiCall";
 
-import styled from "styled-components";
-
 const breakPoints = [
   { width: 1, itemsToShow: 1 },
   { width: 550, itemsToShow: 2, itemsToScroll: 2 },
@@ -24,7 +22,7 @@ const breakPoints = [
 const MyCarousel = ({ category }) => {
   const [items, setItems] = useState([]);
 
-  const trend = async (value) => {
+  const trend = async value => {
     const myItems = await getYoutube(value);
     setItems(myItems.items);
   };
@@ -37,7 +35,7 @@ const MyCarousel = ({ category }) => {
     <Main>
       <Title>{category.title}</Title>
       <Carousel breakPoints={breakPoints}>
-        {items.map((item) => (
+        {items.map(item => (
           <DivImg key={item.id.video}>
             <RouterLink
               to={{
