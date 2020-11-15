@@ -8,6 +8,8 @@ import {
   DivImg,
   RouterLink,
   Image,
+  I,
+  Filter,
 } from "./CarouselStyled";
 
 import { getYoutube } from "../../api/youtubeApiCall";
@@ -47,8 +49,10 @@ const MyCarousel = ({ category }) => {
                 src={item.snippet.thumbnails.medium.url}
                 alt={item.snippet.title}
               />
-              <SongTitles>{item.snippet.title}</SongTitles>
+              <Filter></Filter>
+              <I className="fas fa-play"></I>
             </RouterLink>
+            <SongTitles>{item.snippet.title}</SongTitles>
           </DivImg>
         ))}
       </Carousel>

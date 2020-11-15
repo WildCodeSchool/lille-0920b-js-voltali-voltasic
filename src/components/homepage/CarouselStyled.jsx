@@ -11,14 +11,13 @@ export const Title = styled.h2`
 `;
 
 export const SongTitles = styled.p`
-  color: yellow;
+  color: #b4b4b4;
   font-size: 12pt;
   text-shadow: black 0.1em 0.1em 0.2em;
   text-align: center;
-  position: absolute;
-  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid red;
+  width: 90%;
   visibility: hidden;
-  top: 45%;
 `;
 
 export const Img = styled.img`
@@ -26,11 +25,23 @@ export const Img = styled.img`
   clip-path: ellipse(50% 50%);
 `;
 
-export const Image = styled.img`
-  transition: transform 0.2s;
-  :hover {
-    transform: scale(1.1);
-  }
+export const Image = styled.img``;
+
+//tesssssssssst
+export const Filter = styled.div`
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+`;
+export const I = styled.i`
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0);
+  text-align: center;
+  color: white;
+  font-size: 25pt;
+  visibility: hidden;
 `;
 
 export const DivImg = styled.div`
@@ -39,12 +50,9 @@ export const DivImg = styled.div`
   align-items: center;
   position: relative;
   :hover {
-    ${SongTitles} {
+    ${Filter}, ${I}, ${SongTitles} {
       visibility: visible;
       opacity: 1;
-    }
-    ${Image} {
-      transform: scale(1.1);
     }
   }
 `;
