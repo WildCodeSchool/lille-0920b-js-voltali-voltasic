@@ -26,9 +26,7 @@ export const Img = styled.img`
 export const Image = styled.img``;
 
 //tesssssssssst
-export const Ok = styled.div`
-  border: 1px solid purple;
-`;
+
 export const Filter = styled.div`
   position: absolute;
   border: 1px solid green;
@@ -44,10 +42,18 @@ export const I = styled.i`
   color: white;
   text-shadow: black 0.1em 0.1em 0.6em;
   font-size: 25pt;
-  top: 45%;
+  top: 40%;
   visibility: hidden;
 `;
-
+export const Ok = styled.div`
+  border: 1px solid purple;
+  :hover {
+    ${Filter}, ${I}, ${SongTitles} {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+`;
 export const DivImg = styled.div`
   border: 1px solid red;
   position: relative;
