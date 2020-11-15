@@ -35,6 +35,9 @@
             "url": "https://i.ytimg.com/vi/-CVn3-3g_BI/hqdefault.jpg",
             "width": 480,
             "height": 360
+          },
+          "channelPic": {
+            "url": "https://yt3.ggpht.com/a/AATXAJwiu_gZP5EN9B-Wr0u391ZHY0L31hbWX2o3mLGa0A=s88-c-k-c0x00ffffff-no-rj"
           }
         },
         "channelTitle": "DORETDEPLATINE",
@@ -44,138 +47,150 @@
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "YW5BxTFAUkejmKlrK-yyIMLNu6c",
+      "etag": "aPSCYxZdlgnQuuhiyhILQbKQii8",
       "id": {
         "kind": "youtube#video",
-        "videoId": "-CVn3-3g_BI"
+        "videoId": "ZthUo-Z97uw"
       },
       "snippet": {
-        "publishedAt": "2020-08-15T14:53:51Z",
-        "channelId": "UC-GI5LST5T3Gw93yZxjdFaw",
-        "title": "Bande Organisée - Sch / Kofs / Jul / Naps / Soso maness / Elams / Solda / Houari // Clip Officiel",
-        "description": "Ceci est une œuvre de fiction, qui comporte des scènes susceptibles d'heurter la sensibilité du jeune public. Toute similitude avec des personnes ou des ...",
+        "publishedAt": "2019-11-14T09:00:06Z",
+        "channelId": "UCN2yX1-7Mc36reG_xuR_J5w",
+        "title": "Indila - Parle à ta tête (Clip Officiel)",
+        "description": "Indila - Nouveau single « Parle à ta tête» disponible : https://indila.lnk.to/ParleATaTeteFT Site officiel : http://indila.fr/ Facebook ...",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/-CVn3-3g_BI/default.jpg",
+            "url": "https://i.ytimg.com/vi/ZthUo-Z97uw/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/-CVn3-3g_BI/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/ZthUo-Z97uw/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/-CVn3-3g_BI/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/ZthUo-Z97uw/hqdefault.jpg",
             "width": 480,
             "height": 360
+          },
+          "channelPic": {
+            "url": "https://yt3.ggpht.com/a/AATXAJzBua9pHA_RD1MapKYNuH4crye7OEMWSXS1KLGu=s88-c-k-c0x00ffffff-no-rj-mo"
           }
         },
-        "channelTitle": "DORETDEPLATINE",
+        "channelTitle": "Indila",
         "liveBroadcastContent": "none",
-        "publishTime": "2020-08-15T14:53:51Z"
+        "publishTime": "2019-11-14T09:00:06Z"
       }
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "YW5BxTFAUkejmKlrK-yyIMLNu6c",
+      "etag": "-Gq60zXzxtZ6XO--Zw8O3Ox5YLY",
       "id": {
         "kind": "youtube#video",
-        "videoId": "-CVn3-3g_BI"
+        "videoId": "9k_ddK4wVXM"
       },
       "snippet": {
-        "publishedAt": "2020-08-15T14:53:51Z",
-        "channelId": "UC-GI5LST5T3Gw93yZxjdFaw",
-        "title": "Bande Organisée - Sch / Kofs / Jul / Naps / Soso maness / Elams / Solda / Houari // Clip Officiel",
-        "description": "Ceci est une œuvre de fiction, qui comporte des scènes susceptibles d'heurter la sensibilité du jeune public. Toute similitude avec des personnes ou des ...",
+        "publishedAt": "2020-03-05T15:00:02Z",
+        "channelId": "UCN7G-if0VVT2JSMYglnMmoA",
+        "title": "Maes - Blanche ft. Booba",
+        "description": "Maes - Blanche ft. Booba (Clip Officiel) Single disponible : https://maes.lnk.to/Blanche Prod by: Unprediktable, Denza, Gerald Real by: Romain Cieutat - Pelican ...",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/-CVn3-3g_BI/default.jpg",
+            "url": "https://i.ytimg.com/vi/9k_ddK4wVXM/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/-CVn3-3g_BI/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/9k_ddK4wVXM/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/-CVn3-3g_BI/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/9k_ddK4wVXM/hqdefault.jpg",
             "width": 480,
             "height": 360
+          },
+          "channelPic": {
+            "url": "https://yt3.ggpht.com/a/AATXAJyf0kWleMBZK7MPoHPIQHEEA6d8SmP3POA_7OUvbQ=s88-c-k-c0x00ffffff-no-rj-mo"
           }
         },
-        "channelTitle": "DORETDEPLATINE",
+        "channelTitle": "Maes",
         "liveBroadcastContent": "none",
-        "publishTime": "2020-08-15T14:53:51Z"
+        "publishTime": "2020-03-05T15:00:02Z"
       }
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "YW5BxTFAUkejmKlrK-yyIMLNu6c",
+      "etag": "NTUoqMpXnQ7TYD95aopZT-N6po4",
       "id": {
         "kind": "youtube#video",
-        "videoId": "-CVn3-3g_BI"
+        "videoId": "0V7MdrBMSu0"
       },
       "snippet": {
-        "publishedAt": "2020-08-15T14:53:51Z",
-        "channelId": "UC-GI5LST5T3Gw93yZxjdFaw",
-        "title": "Bande Organisée - Sch / Kofs / Jul / Naps / Soso maness / Elams / Solda / Houari // Clip Officiel",
-        "description": "Ceci est une œuvre de fiction, qui comporte des scènes susceptibles d'heurter la sensibilité du jeune public. Toute similitude avec des personnes ou des ...",
+        "publishedAt": "2020-10-22T15:00:10Z",
+        "channelId": "UCCSFseZ6DfCtVO8giGp7GfA",
+        "title": "KOBA LAD - COFFRE PLEIN FT. MAES &amp; ZED (CLIP OFFICIEL)",
+        "description": "« COFFRE PLEIN » dispo en stream ▶️ http://KobaLaD.lnk.to/CoffrePlein Inclus dans l'album « Détail » ▶️http://KobaLaD.lnk.to/Detail Réalisé par ZAVEN ...",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/-CVn3-3g_BI/default.jpg",
+            "url": "https://i.ytimg.com/vi/0V7MdrBMSu0/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/-CVn3-3g_BI/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/0V7MdrBMSu0/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/-CVn3-3g_BI/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/0V7MdrBMSu0/hqdefault.jpg",
             "width": 480,
             "height": 360
+          },
+          "channelPic": {
+            "url": "https://yt3.ggpht.com/a/AATXAJzc5iMyeanH6sBLtifs8GXmCAaOTMTHfCmzgnR10A=s88-c-k-c0x00ffffff-no-rj-mo"
           }
         },
-        "channelTitle": "DORETDEPLATINE",
+        "channelTitle": "Koba LaD",
         "liveBroadcastContent": "none",
-        "publishTime": "2020-08-15T14:53:51Z"
+        "publishTime": "2020-10-22T15:00:10Z"
       }
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "YW5BxTFAUkejmKlrK-yyIMLNu6c",
+      "etag": "wx-8h_VG-TnJOIUEtO8exoZcsjA",
       "id": {
         "kind": "youtube#video",
-        "videoId": "-CVn3-3g_BI"
+        "videoId": "FndmvPkI1Ms"
       },
       "snippet": {
-        "publishedAt": "2020-08-15T14:53:51Z",
-        "channelId": "UC-GI5LST5T3Gw93yZxjdFaw",
-        "title": "Bande Organisée - Sch / Kofs / Jul / Naps / Soso maness / Elams / Solda / Houari // Clip Officiel",
-        "description": "Ceci est une œuvre de fiction, qui comporte des scènes susceptibles d'heurter la sensibilité du jeune public. Toute similitude avec des personnes ou des ...",
+        "publishedAt": "2014-09-26T02:00:01Z",
+        "channelId": "UCG6XmGtwd0geNvV7CZKEACQ",
+        "title": "Kendji Girac - Andalouse (Clip Officiel)",
+        "description": "Découvrez le 2ème Single de l'album de Kendji Girac. Facebook : https://www.facebook.com/kendjioff Twitter : https://twitter.com/girackendji Site Officiel ...",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/-CVn3-3g_BI/default.jpg",
+            "url": "https://i.ytimg.com/vi/FndmvPkI1Ms/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/-CVn3-3g_BI/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/FndmvPkI1Ms/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/-CVn3-3g_BI/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/FndmvPkI1Ms/hqdefault.jpg",
             "width": 480,
             "height": 360
+          },
+          "channelPic": {
+            "url": "https://yt3.ggpht.com/a/AATXAJw01w2nKwQ9h758qbxU-n5uBKWvIB-a31kdT_x-PQ=s88-c-k-c0x00ffffff-no-rj-mo"
           }
         },
-        "channelTitle": "DORETDEPLATINE",
+        "channelTitle": "Kendji Girac",
         "liveBroadcastContent": "none",
-        "publishTime": "2020-08-15T14:53:51Z"
+        "publishTime": "2014-09-26T02:00:01Z"
       }
     }
   ]
