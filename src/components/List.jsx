@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import "./List.css";
 
 import { getYoutube } from "../api/youtubeApiCall";
 
-const List = () => {
+const List = ({ changeVideo }) => {
   const [items, setItems] = useState([]);
 
   const location = useLocation();
@@ -22,19 +22,13 @@ const List = () => {
   return (
     <div>
       {items.map((item) => (
-        <div key={item.id.videoId}>
+        <div onClick={() => changeVideo(item)} key={item.id.videoId}>
           <p>{item.snippet.title}</p>
-          <Link
-            to={{
-              pathname: `/music/${item.id.videoId}`,
-              state: { title: item.snippet.title },
-            }}
-          >
-            <img
-              src={item.snippet.thumbnails.medium.url}
-              alt={item.snippet.title}
-            />
-          </Link>
+
+          <img
+            src={item.snippet.thumbnails.medium.url}
+            alt={item.snippet.title}
+          />
         </div>
       ))}
     </div>

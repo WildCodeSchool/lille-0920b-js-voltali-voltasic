@@ -1,14 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Carousel from "react-elastic-carousel";
 
-import {
-  Main,
-  Title,
-  SongTitles,
-  DivImg,
-  RouterLink,
-  Image,
-} from "./CarouselStyled";
+import { Main, Title, SongTitles, DivImg, Image } from "./CarouselStyled";
 
 import { getYoutube } from "../../api/youtubeApiCall";
 
@@ -19,10 +12,10 @@ const breakPoints = [
   { width: 1200, itemsToShow: 4 },
 ];
 
-const MyCarousel = ({ category }) => {
+const MyCarousel = ({ category, changeVideo }) => {
   const [items, setItems] = useState([]);
 
-  const trend = async value => {
+  const trend = async (value) => {
     const myItems = await getYoutube(value);
     setItems(myItems.items);
   };
@@ -35,20 +28,13 @@ const MyCarousel = ({ category }) => {
     <Main>
       <Title>{category.title}</Title>
       <Carousel breakPoints={breakPoints}>
-        {items.map(item => (
-          <DivImg key={item.id.video}>
-            <RouterLink
-              to={{
-                pathname: `/music/${item.id.videoId}`,
-                state: { title: item.snippet.title },
-              }}
-            >
-              <Image
-                src={item.snippet.thumbnails.medium.url}
-                alt={item.snippet.title}
-              />
-              <SongTitles>{item.snippet.title}</SongTitles>
-            </RouterLink>
+        {items.map((item) => (
+          <DivImg onClick={() => changeVideo(item)}>
+            <Image
+              src={item.snippet.thumbnails.medium.url}
+              alt={item.snippet.title}
+            />
+            <SongTitles>{item.snippet.title}</SongTitles>
           </DivImg>
         ))}
       </Carousel>

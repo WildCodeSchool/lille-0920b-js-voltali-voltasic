@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import { Switch, Route } from "react-router-dom";
 
 import List from "./components/List";
@@ -9,20 +9,27 @@ import Footer from "./components/Footer";
 
 import "./App.css";
 
-class App extends React.Component {
-  render() {
-    return (
-      <div className="App">
-        <Nav />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/list" component={List} />
-          <Route path="/music/:idVideo" component={Music} />
-        </Switch>
+const App = () => {
+  const [idVideo, setIdVideo] = useState();
 
-        <Footer />
-      </div>
-    );
-  }
-}
+  return (
+    <div className="App">
+      <Nav />
+      {idVideo && <Music id={idVideo} />}
+      <Switch>
+        <Route
+          exact
+          path="/"
+          render={() => <Home changeVideo={setIdVideo} />}
+        />
+        <Route
+          exact
+          path="/List"
+          render={() => <List changeVideo={setIdVideo} />}
+        />
+      </Switch>
+      <Footer />
+    </div>
+  );
+};
 export default App;
