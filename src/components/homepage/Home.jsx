@@ -1,26 +1,39 @@
 import React from "react";
-import TrendMusics from "./TrendMusics";
-<<<<<<< HEAD
-import TrendArtists from "./Artists";
-=======
-import SweetMusics from "./Sweet";
 
-import RnbMusics from "./RnbMusics";
-import RockMusics from "./RockMusics";
->>>>>>> dev
+import TrendArtists from "./Artists";
 
 import "./Home.css";
-import SoolMusics from "./SoulMusics";
+import MyCarousel from "./MyCarousel";
 
+const myTypes = [
+  {
+    title: "Musiques en tendance",
+    searchValue: "musique+tendance+fr",
+  },
+  {
+    title: "Soul",
+    searchValue: "soul+musics",
+  },
+  {
+    title: "Détente",
+    searchValue: "ambiance+musics+sweet+musics+love+musics",
+  },
+  {
+    title: "Rock",
+    searchValue: "rocknrollmusic+grungemusic",
+  },
+  {
+    title: "RnB et Hip-Hop",
+    searchValue: "rnb+hip+hop-(bestof+compilation)",
+  },
+];
 const Home = () => {
   return (
     <>
       <TrendArtists />
-      <TrendMusics />
-      <SoolMusics />
-      <SweetMusics />
-      <RnbMusics />
-      <RockMusics />
+      {myTypes.map((item) => (
+        <MyCarousel category={item} />
+      ))}
     </>
   );
 };

@@ -16,7 +16,6 @@ const TrendArtists = () => {
 
   const getMock = () => {
     setData(mock.items);
-    return mock.items;
   };
 
   useEffect(() => {
@@ -27,7 +26,7 @@ const TrendArtists = () => {
     <Main>
       <Title>Artistes du moment</Title>
       <Carousel breakPoints={breakPoints}>
-        {data.map(item => (
+        {data.map((item) => (
           <DivImg key={item.id.video}>
             <Img
               src={item.snippet.thumbnails.channelPic.url}

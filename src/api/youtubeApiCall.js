@@ -4,7 +4,7 @@ import mock from "./mock.json";
 export const getYoutube = async (query) => {
   try {
     const { data } = await axios.get(
-      `https://content.googleapis.com/youtube/v3/search?q=${query}&part=snippet&maxResults=1&type=video&key=AIzaSyD0qqnH0XQqwZDlHrZg35xpNNhKyoqD3Pk`
+      `https://content.googleapis.com/youtube/v3/search?q=${query}&part=snippet&maxResults=10&type=video&key=AIzaSyCFQu5SocYyUJRVnZskCktBHqAMNMuU8Co`
     );
     return data;
   } catch (error) {
