@@ -1,3 +1,6 @@
-* {
+.App {
   background-color: #1e1e20;
+  background-image: url("./images/audience-868074_960_720.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
