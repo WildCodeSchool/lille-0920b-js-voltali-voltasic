@@ -11,6 +11,7 @@ const NavBar = styled.div`
   display: flex;
   width: 100%;
   height: 30vh;
+  margin-bottom: 25vh;
   justify-content: space-around;
   border-bottom: 2px solid yellow;
   color: #fff;
