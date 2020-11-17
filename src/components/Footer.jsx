@@ -4,11 +4,15 @@ import { Link } from "react-router-dom";
 
 const Box = styled.div`
   @media screen and (min-width: 501px) {
+    position: fixed;
+    left: 0;
+    bottom: 0;
     height: 10vh;
     width: 100%;
     display: flex;
     align-items: center;
     border-top: 3px solid yellow;
+    background-color: #1e1e20;
   }
 
   @media screen and (max-width: 500px) {
@@ -16,6 +20,10 @@ const Box = styled.div`
     width: 100%;
     display: flex;
     border-top: 3px solid yellow;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color: #1e1e20;
   }
 `;
 

@@ -29,12 +29,12 @@ const myTypes = [
 ];
 const Home = () => {
   return (
-    <>
+    <div className="main">
       <TrendArtists />
       {myTypes.map((item) => (
         <MyCarousel category={item} />
       ))}
-    </>
+    </div>
   );
 };
 export default Home;
