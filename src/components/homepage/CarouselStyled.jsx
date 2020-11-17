@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Main = styled.div`
-  padding: 1%;
+  padding: 5%;
 `;
 
 export const Title = styled.h2`
