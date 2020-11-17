@@ -9,8 +9,7 @@ const SearchMain = styled.div`
   align-items: center;
   justify-content: space-around;
   color: #fff;
-  width: 30%;
-  padding-right: 10%;
+  width: 40%;
   @media (max-width: 1000px) {
     width: 50%;
   }
@@ -22,7 +21,7 @@ const SearchMain = styled.div`
 `;
 
 const SearchBar = styled.input`
-  padding: 0 2% 0 2%;
+  padding: 1% 2%;
   width: 90%;
   height: 30%;
   border-radius: 15px;
@@ -45,7 +44,7 @@ const Form = styled.form`
 const Search = () => {
   const [value, setValue] = useState("");
 
-  const handleChangeValue = (event) => {
+  const handleChangeValue = event => {
     setValue(event.target.value);
   };
 

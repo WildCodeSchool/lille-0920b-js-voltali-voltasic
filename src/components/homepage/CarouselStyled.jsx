@@ -19,7 +19,7 @@ export const SongTitles = styled.p`
 `;
 
 export const Img = styled.img`
-  width: 150px;
+  width: 200px;
   clip-path: ellipse(50% 50%);
 `;
 
