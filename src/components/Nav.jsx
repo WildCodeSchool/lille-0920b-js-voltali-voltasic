@@ -7,15 +7,15 @@ const NavBar = styled.div`
   display: flex;
   width: 100%;
   height: 70vh;
-  flex-direction: column;
-  color: #fff;
+  justify-content: center;
+  color: #000;
   @media (max-width: 500px) {
     border-bottom: 1px solid yellow;
   }
 `;
 
 const Logo = styled.img`
-  width: 40%;
+  width: 15%;
   @media (max-width: 500px) {
     max-width: 100%;
   }
@@ -27,19 +27,16 @@ const Lien = styled(Link)`
 `;
 
 const Container = styled.div`
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  //border: 1px solid red;
+  border: 1px solid red;
 `;
 
 const Nav = ({ value, change, youtube }) => {
   return (
     <NavBar>
-      <Lien to="/">
-        <Logo src="./logo.svg" />
-      </Lien>
       <Container>
+        <Lien to="/">
+          <Logo src="./logo.svg" />
+        </Lien>
         <Search value={value} change={change} youtube={youtube} />
       </Container>
     </NavBar>
