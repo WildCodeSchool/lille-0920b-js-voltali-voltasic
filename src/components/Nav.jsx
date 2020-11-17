@@ -6,7 +6,7 @@ import Search from "./Search";
 const NavBar = styled.div`
   display: flex;
   width: 100%;
-  height: 75vh;
+  height: 70vh;
   flex-direction: column;
   color: #fff;
   @media (max-width: 500px) {
