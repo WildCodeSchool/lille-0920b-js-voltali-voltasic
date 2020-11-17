@@ -29,7 +29,6 @@ export const Image = styled.img``;
 
 export const Filter = styled.div`
   position: absolute;
-  border: 1px solid green;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
@@ -46,7 +45,6 @@ export const I = styled.i`
   visibility: hidden;
 `;
 export const Ok = styled.div`
-  border: 1px solid purple;
   :hover {
     ${Filter}, ${I}, ${SongTitles} {
       visibility: visible;
@@ -55,7 +53,6 @@ export const Ok = styled.div`
   }
 `;
 export const DivImg = styled.div`
-  border: 1px solid red;
   position: relative;
   display: flex;
   flex-direction: column;
