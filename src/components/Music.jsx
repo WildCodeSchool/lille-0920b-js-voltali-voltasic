@@ -1,15 +1,11 @@
 import { useState, useRef } from "react";
 import ReactPlayer from "react-player";
-import { useLocation, useParams } from "react-router-dom";
 
 import "./Music.css";
-const Music = () => {
-  let { idVideo } = useParams();
-  let location = useLocation();
-
+const Music = ({ id }) => {
   const inputRange = useRef(null);
 
-  const [playing, setPlaying] = useState(false);
+  const [playing, setPlaying] = useState(true);
   const [volume, setVolume] = useState(0.5);
   const [loop, setLoop] = useState(false);
   const [played, setPlayed] = useState(0);
@@ -43,14 +39,13 @@ const Music = () => {
       setPlayed(state.played);
     }
   };
-
   return (
     <div>
-      <h1>{location.state.title}</h1>
+      <h1>{id.snippet.title}</h1>
       <ReactPlayer
         ref={inputRange}
         className="player"
-        url={`https://www.youtube.com/watch?v=${idVideo} `}
+        url={`https://www.youtube.com/watch?v=${id.id.videoId} `}
         config={{ file: { attributes: { disablepictureinpicture: "true" } } }}
         volume={volume}
         playing={playing}
