@@ -24,15 +24,16 @@ progress::-moz-progress-bar {
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   input[type="range"] {
     overflow: hidden;
-    width: 400px;
-    color: rgba(0, 100, 180, 1);
+    width: 350px;
+    color: yellow;
     border: 1px solid black;
+    background-color: #1e1e20;
     -webkit-appearance: none;
   }
   input[type="range"]::-webkit-slider-runnable-track {
     height: 10px;
     -webkit-appearance: none;
-    color: rgba(0, 100, 180, 1);
+    color: yellow;
     margin-top: -1px;
   }
   input[type="range"]::-webkit-slider-thumb {
@@ -55,12 +56,12 @@ input[type="range"]::-moz-range-progress {
 /** FF*/
 
 input[type="range"]::-moz-range-progress {
-  background-color: rgba(0, 100, 180, 1);
+  background-color: yellow;
   border: 1px;
 }
 
 input[type="range"]::-moz-range-track {
-  background-color: grey;
+  background-color: #1e1e20;
   border: 1px;
 }
 

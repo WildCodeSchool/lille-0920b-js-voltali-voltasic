@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 import ReactPlayer from "react-player";
 import { useLocation, useParams } from "react-router-dom";
+import styled from "styled-components";
 
 import "./Music.css";
 const Music = () => {
@@ -44,8 +45,48 @@ const Music = () => {
     }
   };
 
+  const Lecteur = styled.div`
+    margin-left: 30%;
+  `;
+
+  const FirstLine = styled.div`
+    display: flex;
+    justify-content: flex-start;
+  `;
+
+  const Button = styled.button`
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #1e1e20;
+    color: yellow;
+    width: 8vw;
+    height: 5vh;
+    :hover {
+      background-color: yellow;
+      color: #1e1e20;
+    }
+  `;
+
+  const LabelLoop = styled.label`
+    font-size: 2vh;
+    margin-top: 1%;
+    margin-left: 1%;
+  `;
+
+  const LabelVolume = styled.label`
+    font-size: 2.5vh;
+    margin-top: 0.8%;
+    margin-left: 4%;
+  `;
+
+  const Volume = styled.input`
+    height: 2vh;
+
+    margin-top: 1%;
+  `;
+
   return (
-    <div>
+    <Lecteur>
       <h1>{location.state.title}</h1>
       <ReactPlayer
         ref={inputRange}
@@ -57,41 +98,32 @@ const Music = () => {
         loop={loop}
         onProgress={handleProgress}
       />
-      <button onClick={handlePlayPause}>{playing ? "Pause" : "Play"}</button>
-      <label htmlFor="volume">Volume</label>
-      <input
-        type="range"
-        min={0}
-        max={1}
-        value={volume}
-        step="any"
-        onChange={handleVolume}
-      />
-      <br />
-      <label htmlFor="loop">Loop</label>
-      <input
-        id="loop"
-        type="checkbox"
-        checked={loop}
-        onChange={handleToggleLoop}
-      />
-      <br />
-      Played
-      <progress max={1} value={played} />
-      <br />
-      Seek
-      <input
-        className="range_css"
-        type="range"
-        min={0}
-        max={0.999999}
-        step="any"
-        value={played}
-        onMouseDown={handleSeekMouseDown}
-        onChange={handleSeekChange}
-        onMouseUp={handleSeekMouseUp}
-      />
-    </div>
+      <FirstLine>
+        <Button className="play_button" onClick={handlePlayPause}>
+          {playing ? <i class="fas fa-pause"></i> : <i class="fas fa-play"></i>}
+        </Button>
+        <LabelLoop htmlFor="loop">
+          <i class="fas fa-undo"></i>
+        </LabelLoop>
+        <input
+          id="loop"
+          type="checkbox"
+          checked={loop}
+          onChange={handleToggleLoop}
+        />
+        <LabelVolume htmlFor="volume">
+          <i class="fas fa-volume-up"></i>
+        </LabelVolume>
+        <Volume
+          type="range"
+          min={0}
+          max={1}
+          value={volume}
+          step="any"
+          onChange={handleVolume}
+        />
+      </FirstLine>
+    </Lecteur>
   );
 };
 
