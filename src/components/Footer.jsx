@@ -11,7 +11,6 @@ const Box = styled.div`
     width: 100%;
     display: flex;
     align-items: center;
-    border-top: 3px solid yellow;
     background-color: #1e1e20;
   }
 
@@ -19,7 +18,7 @@ const Box = styled.div`
     height: 10vh;
     width: 100%;
     display: flex;
-    border-top: 3px solid yellow;
+
     position: fixed;
     left: 0;
     bottom: 0;
@@ -101,7 +100,7 @@ const Footer = () => {
           <i className="far fa-address-book" />
         </Cgu>
         <LienMob to="/">
-          <i className="fas fa-cog" />
+          <i class="fas fa-users"></i>
         </LienMob>
       </MobilBox>
     </Box>
