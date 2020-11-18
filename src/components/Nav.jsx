@@ -4,9 +4,6 @@ import { Link } from "react-router-dom";
 import Search from "./Search";
 
 const NavBar = styled.div`
-  /*background-image: url("./audience-868074_960_720.png");
-  background-repeat: no-repeat;
-  background-size: cover;*/
   position: fixed;
   top: 0;
   background-color: #1e1e20;
@@ -14,11 +11,9 @@ const NavBar = styled.div`
   width: 100%;
   height: 10vh;
   justify-content: space-around;
-  border-bottom: 2px solid yellow;
   color: #fff;
   z-index: 1;
   @media (max-width: 500px) {
-    border-bottom: 1px solid yellow;
     background-image: none;
   }
 `;
