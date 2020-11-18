@@ -2,12 +2,6 @@
   /*background-color: #1e1e20;*/
   background-image: url("./images/pex.jpeg");
   background-repeat: no-repeat;
-  background-size: /*contain;*/ 100% 23.5%;
-  background: linear-gradient(
-      217deg,
-      rgba(255, 187, 49, 0.8),
-      rgba(255, 0, 0, 0) 70.71%
-    ),
-    linear-gradient(127deg, rgb(181, 107, 37, 0.8), rgba(0, 255, 0, 0) 70.71%),
-    linear-gradient(336deg, rgba(181, 107, 37, 0.8), rgba(0, 0, 255, 0) 70.71%);
+  background-size: cover;
+  height: 100%;
 }
