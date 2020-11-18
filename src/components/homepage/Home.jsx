@@ -27,12 +27,17 @@ const myTypes = [
     searchValue: "rnb+hip+hop-(bestof+compilation)",
   },
 ];
+
 const Home = ({ changeVideo }) => {
   return (
     <>
       <TrendArtists />
       {myTypes.map((item) => (
-        <MyCarousel category={item} changeVideo={changeVideo} />
+        <MyCarousel
+          key={item.title}
+          category={item}
+          changeVideo={changeVideo}
+        />
       ))}
     </>
   );

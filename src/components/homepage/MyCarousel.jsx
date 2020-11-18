@@ -29,7 +29,7 @@ const MyCarousel = ({ category, changeVideo }) => {
       <Title>{category.title}</Title>
       <Carousel breakPoints={breakPoints}>
         {items.map((item) => (
-          <DivImg onClick={() => changeVideo(item)}>
+          <DivImg key={item.id.videoId} onClick={() => changeVideo(item)}>
             <Image
               src={item.snippet.thumbnails.medium.url}
               alt={item.snippet.title}
