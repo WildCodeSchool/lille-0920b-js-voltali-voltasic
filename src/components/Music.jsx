@@ -39,7 +39,6 @@ const Music = ({ id }) => {
       setPlayed(state.played);
     }
   };
-  console.log(id);
   return (
     <div>
       <h1>{id.snippet.title}</h1>
