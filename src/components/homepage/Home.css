@@ -29,7 +29,7 @@ button.rec-dot {
 
 .rec.rec-arrow.rec.rec-arrow-right,
 .rec.rec-arrow.rec.rec-arrow-left {
-  background-color: rgba(253, 250, 250, 0.2);
+  background-color: #1e1e20;
   color: yellow;
   border-radius: 5px;
 }
@@ -37,7 +37,7 @@ button.rec-dot {
 .rec.rec-arrow.rec.rec-arrow-right:hover,
 .rec.rec-arrow.rec.rec-arrow-left:hover {
   background-color: yellow;
-  color: grey;
+  color: #1e1e20;
 }
 
 .rec.rec-arrow:disabled {
