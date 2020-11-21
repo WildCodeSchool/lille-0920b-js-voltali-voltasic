@@ -21,6 +21,7 @@ const Container = styled.div`
   display: flex;
   padding: 1%;
   background-color: black;
+  justify-content: center;
 `;
 
 const ListBloc = styled.div`
@@ -33,23 +34,33 @@ const ListBloc = styled.div`
   background-color: black;
 `;
 
-const P = styled.p``;
+const P = styled.p`
+  background-color: black;
+`;
 
-const Cross = styled.span``;
+const Cross = styled.span`
+  visibility: hidden;
+  background-color: black;
+`;
 
 const List = styled.div`
   display: flex;
   align-items: center;
+  background-color: black;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   :hover {
-    background-color: black;
+    background-color: #1e1e20;
     ${P}, ${Cross} {
-      background-color: black;
+      background-color: #1e1e20;
+    }
+    ${Cross} {
+      visibility: visible;
     }
   }
 `;
 
 const Img = styled.img`
-  width: 60%;
+  width: 40%;
 `;
 
 const Playlist = () => {
@@ -72,7 +83,7 @@ const Playlist = () => {
   };
 
   const handlePic = id => {
-    const url = `https://i.ytimg.com/vi/${id}/mqdefault.jpg`;
+    const url = `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
     setPic(url);
     console.log(pic);
   };
