@@ -53,6 +53,11 @@ const List = styled.div`
   }
 `;
 
+const Thumbnail = styled.img`
+  width: 7%;
+  margin: 10px;
+`;
+
 const Img = styled.img`
   width: 40%;
 `;
@@ -88,6 +93,7 @@ const Playlist = () => {
               onClick={() => handlePic(item.id.videoId)}
               key={item.snippet.title}
             >
+              <Thumbnail src={item.snippet.thumbnails.default.url} />
               <P>{item.snippet.title}</P>
             </List>
           ))}
