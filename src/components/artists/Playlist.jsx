@@ -38,11 +38,6 @@ const P = styled.p`
   background-color: black;
 `;
 
-const Cross = styled.span`
-  visibility: hidden;
-  background-color: black;
-`;
-
 const List = styled.div`
   display: flex;
   align-items: center;
@@ -50,11 +45,8 @@ const List = styled.div`
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   :hover {
     background-color: #1e1e20;
-    ${P}, ${Cross} {
+    ${P} {
       background-color: #1e1e20;
-    }
-    ${Cross} {
-      visibility: visible;
     }
   }
 `;
@@ -72,14 +64,6 @@ const Playlist = () => {
   const getPlay = async value => {
     const myData = await getYoutube(value);
     setPlay(myData.items);
-  };
-
-  const handleDelete = title => {
-    console.log(title);
-    const copyGames = play.slice();
-    const index = copyGames.findIndex(item => item.snippet.title === title);
-    copyGames.splice(index, 1);
-    setPlay(copyGames);
   };
 
   const handlePic = id => {
@@ -103,7 +87,6 @@ const Playlist = () => {
               key={item.snippet.title}
             >
               <P>{item.snippet.title}</P>
-              <Cross onClick={() => handleDelete(item.snippet.title)}>X</Cross>
             </List>
           ))}
         </ListBloc>
