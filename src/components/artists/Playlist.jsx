@@ -27,6 +27,7 @@ const Container = styled.div`
 const ListBloc = styled.div`
   width: 40%;
   height: 400px;
+  margin: 1%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -42,6 +43,7 @@ const List = styled.div`
   display: flex;
   align-items: center;
   background-color: black;
+  padding: 2%;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   :hover {
     background-color: #1e1e20;
@@ -95,7 +97,7 @@ const Playlist = () => {
           <Img src={pic} />
         ) : (
           <Img
-            src={`https://i.ytimg.com/vi/${play[0].id.videoId}/mqdefault.jpg`}
+            src={`https://i.ytimg.com/vi/${play[0].id.videoId}/hqdefault.jpg`}
           />
         )}
         */}
