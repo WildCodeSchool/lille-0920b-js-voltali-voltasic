@@ -57,7 +57,7 @@ const List = styled.div`
   align-items: center;
   background-color: black;
   padding: 2%;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   :hover {
     background-color: #1e1e20;
     ${P} {
