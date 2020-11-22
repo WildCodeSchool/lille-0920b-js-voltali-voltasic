@@ -7,14 +7,19 @@ import { getYoutube } from "../../api/youtubeApiCall";
 
 const Main = styled.div`
   margin-top: 10vh;
-  margin-bottom: 10vh;
+  height: 110vh;
   background-color: black;
   color: white;
-  padding: 1%;
+  @media screen and (max-width: 501px) {
+    margin-left: 10px;
+  }
 `;
 const Title = styled.h1`
   font-size: 25pt;
   background-color: black;
+  @media screen and (max-width: 501px) {
+    font-size: 18pt;
+  }
 `;
 
 const Container = styled.div`
@@ -22,17 +27,25 @@ const Container = styled.div`
   padding: 1%;
   background-color: black;
   justify-content: center;
+  @media screen and (max-width: 501px) {
+    flex-direction: column-reverse;
+  }
 `;
 
 const ListBloc = styled.div`
   width: 40%;
   height: 400px;
-  margin: 1%;
+  margin-top: 25vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 1%;
   background-color: black;
+  @media screen and (max-width: 501px) {
+    width: 90%;
+    margin-top: 10vh;
+    height: 100vh;
+  }
 `;
 
 const P = styled.p`
@@ -56,10 +69,15 @@ const List = styled.div`
 const Thumbnail = styled.img`
   width: 7%;
   margin: 10px;
+  @media screen and (max-width: 501px) {
+  }
 `;
 
 const Img = styled.img`
   width: 40%;
+  @media screen and (max-width: 501px) {
+    width: 80%;
+  }
 `;
 
 const Playlist = () => {
@@ -94,6 +112,7 @@ const Playlist = () => {
               key={item.snippet.title}
             >
               <Thumbnail src={item.snippet.thumbnails.default.url} />
+
               <P>{item.snippet.title}</P>
             </List>
           ))}

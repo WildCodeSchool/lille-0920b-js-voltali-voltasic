@@ -3,11 +3,13 @@ import styled from "styled-components";
 
 export const Main = styled.div`
   padding: 1%;
+  background-color: black;
 `;
 
 export const Title = styled.h2`
   font-size: 25pt;
   color: white;
+  background-color: black;
 `;
 
 export const SongTitles = styled.p`

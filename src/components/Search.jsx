@@ -28,6 +28,7 @@ const SearchBar = styled.input`
   border-radius: 15px;
   border: #ffe600 3px solid;
   color: #fff;
+  background-color: #1e1e20;
   font-size: 20px;
   @media (max-width: 500px) {
     border: #ffe600 2px solid;
@@ -45,7 +46,7 @@ const Form = styled.form`
 const Search = () => {
   const [value, setValue] = useState("");
 
-  const handleChangeValue = (event) => {
+  const handleChangeValue = event => {
     setValue(event.target.value);
   };
 
