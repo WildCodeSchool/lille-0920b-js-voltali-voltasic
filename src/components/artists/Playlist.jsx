@@ -24,27 +24,34 @@ const Title = styled.h1`
 
 const Container = styled.div`
   display: flex;
-  padding: 1%;
   background-color: black;
   justify-content: center;
-  @media screen and (max-width: 501px) {
+  align-items: center;
+  border: 1px solid red;
+  @media screen and (max-width: 601px) {
     flex-direction: column-reverse;
   }
 `;
 
 const ListBloc = styled.div`
+  border: 1px solid green;
   width: 40%;
-  height: 400px;
-  margin-top: 25vh;
+  margin-top: 5vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 1%;
   background-color: black;
-  @media screen and (max-width: 501px) {
+  @media screen and (max-width: 601px) {
     width: 90%;
-    margin-top: 10vh;
-    height: 100vh;
+    height: 450px;
+    overflow-y: scroll;
+    scrollbar-color: black black; //firefox
+    scrollbar-width: thin;
+    ::-webkit-scrollbar {
+      //chrome
+      background-color: black;
+    }
   }
 `;
 
@@ -53,6 +60,8 @@ const P = styled.p`
 `;
 
 const List = styled.div`
+  width: 90%;
+  height: 100%;
   display: flex;
   align-items: center;
   background-color: black;
@@ -75,7 +84,8 @@ const Thumbnail = styled.img`
 
 const Img = styled.img`
   width: 40%;
-  @media screen and (max-width: 501px) {
+  height: 10%;
+  @media screen and (max-width: 601px) {
     width: 80%;
   }
 `;

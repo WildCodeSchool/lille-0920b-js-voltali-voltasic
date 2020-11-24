@@ -13,13 +13,12 @@ export const Title = styled.h2`
 `;
 
 export const SongTitles = styled.p`
-  color: yellow;
+  color: grey;
   font-size: 12pt;
   text-shadow: black 0.1em 0.1em 0.2em;
   text-align: center;
-  position: absolute;
+  text-decoration: none;
   background-color: rgba(255, 255, 255, 0);
-  visibility: hidden;
   top: 45%;
 `;
 
@@ -39,7 +38,7 @@ export const DivImg = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
+
   :hover {
     ${SongTitles} {
       visibility: visible;
