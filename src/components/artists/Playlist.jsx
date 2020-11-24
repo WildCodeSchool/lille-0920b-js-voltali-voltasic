@@ -129,15 +129,6 @@ const Playlist = ({ changeVideo }) => {
             </List>
           ))}
         </ListBloc>
-        {/*
-        {pic ? (
-          <Img src={pic} />
-        ) : (
-          <Img
-            src={`https://i.ytimg.com/vi/${play[0].id.videoId}/hqdefault.jpg`}
-          />
-        )}
-        */}
         {pic && <Img src={pic} />}
       </Container>
     </Main>
