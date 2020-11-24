@@ -27,27 +27,25 @@ progress::-moz-progress-bar {
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   input[type="range"] {
     overflow: hidden;
-    width: 20vw;
+    width: 20%;
     color: yellow;
-    border: 1px solid yellow;
     background-color: #1e1e20;
     -webkit-appearance: none;
   }
   input[type="range"]::-webkit-slider-runnable-track {
-    height: 10px;
+    height: 2px;
     -webkit-appearance: none;
-    color: yellow;
-    margin-top: -1px;
+    background-color: yellow;
   }
   input[type="range"]::-webkit-slider-thumb {
-    width: 10px;
+    width: 5%;
     -webkit-appearance: none;
     height: 10px;
     cursor: ew-resize;
-    background: #434343;
-    box-shadow: -405px 0 0 400px rgba(0, 100, 180, 1);
+    background: white;
     border-radius: 50%;
-    border: 0 !important;
+    border: 1px black solid;
+    margin-top: -2%;
   }
 }
 

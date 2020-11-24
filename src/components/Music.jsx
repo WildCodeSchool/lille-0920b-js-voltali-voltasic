@@ -42,7 +42,7 @@ const Music = ({ id }) => {
     }
   `;
   const I = styled.i`
-    color: yellow;
+    color: white;
   `;
 
   const Button = styled.button`
@@ -118,7 +118,7 @@ const Music = ({ id }) => {
           )}
         </Button>
         <LabelLoop htmlFor="loop">
-          <i className="fas fa-undo"></i>
+          <I className="fas fa-undo"></I>
         </LabelLoop>
         <input
           id="loop"
@@ -127,7 +127,7 @@ const Music = ({ id }) => {
           onChange={handleToggleLoop}
         />
         <LabelVolume htmlFor="volume">
-          <i className="fas fa-volume-up"></i>
+          <I className="fas fa-volume-up"></I>
         </LabelVolume>
         <Volume
           type="range"
@@ -137,10 +137,10 @@ const Music = ({ id }) => {
           step="any"
           onChange={handleVolume}
         />
-        <i
+        <I
           className={display ? "fas fa-chevron-up" : "fas fa-chevron-down"}
           onClick={handleDisplay}
-        ></i>
+        ></I>
       </AjustButton>
     </div>
   );
