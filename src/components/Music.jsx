@@ -11,6 +11,7 @@ const Music = ({ id }) => {
   const [loop, setLoop] = useState(false);
   const [played, setPlayed] = useState(0);
   const [seeking, setSeeking] = useState(false);
+  const [display, setDisplay] = useState(false);
 
   const handlePlayPause = () => {
     setPlaying(!playing);
@@ -41,8 +42,13 @@ const Music = ({ id }) => {
     }
   };
 
+  const handleDisplay = () => {
+    setDisplay(!display);
+  };
+
   const SongTitle = styled.h1`
     font-size: 15pt;
+    color: white;
     @media screen and (max-width: 450px) {
       font-size: 10pt;
       margin-bottom: 5vh;
@@ -104,14 +110,13 @@ const Music = ({ id }) => {
       <SongTitle>{id.snippet.title}</SongTitle>
       <ReactPlayer
         ref={inputRange}
-        className="player"
         url={`https://www.youtube.com/watch?v=${id.id.videoId} `}
         config={{ file: { attributes: { disablepictureinpicture: "true" } } }}
         volume={volume}
         playing={playing}
         loop={loop}
         onProgress={handleProgress}
-        height="0px"
+        height={display ? "20vh" : "0px"}
       />
       <AjustButton>
         <Button className="play_button" onClick={handlePlayPause}>
@@ -141,6 +146,10 @@ const Music = ({ id }) => {
           step="any"
           onChange={handleVolume}
         />
+        <i
+          className={display ? "fas fa-chevron-up" : "fas fa-chevron-down"}
+          onClick={handleDisplay}
+        ></i>
       </AjustButton>
     </div>
   );
