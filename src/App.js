@@ -28,7 +28,10 @@ const App = () => {
           path="/List"
           render={() => <List changeVideo={setIdVideo} />}
         />
-        <Route path="/playlist/:id" component={Playlist} />
+        <Route
+          path="/playlist/:id"
+          render={() => <Playlist changeVideo={setIdVideo} />}
+        />
       </Switch>
       <Footer />
     </div>

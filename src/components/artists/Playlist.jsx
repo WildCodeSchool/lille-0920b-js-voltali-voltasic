@@ -42,16 +42,16 @@ const ListBloc = styled.div`
   justify-content: center;
   padding: 1%;
   background-color: black;
+  height: 450px;
+  overflow-y: scroll;
+  scrollbar-color: black black; //firefox
+  scrollbar-width: thin;
+  ::-webkit-scrollbar {
+    //chrome
+    background-color: black;
+  }
   @media screen and (max-width: 601px) {
     width: 90%;
-    height: 450px;
-    overflow-y: scroll;
-    scrollbar-color: black black; //firefox
-    scrollbar-width: thin;
-    ::-webkit-scrollbar {
-      //chrome
-      background-color: black;
-    }
   }
 `;
 
@@ -90,7 +90,7 @@ const Img = styled.img`
   }
 `;
 
-const Playlist = () => {
+const Playlist = ({ changeVideo }) => {
   let location = useLocation();
 
   const [play, setPlay] = useState([]);
@@ -101,10 +101,11 @@ const Playlist = () => {
     setPlay(myData.items);
   };
 
-  const handlePic = id => {
+  const handlePic = (id, item) => {
     const url = `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
     setPic(url);
     console.log(pic);
+    changeVideo(item);
   };
 
   useEffect(() => {
@@ -118,7 +119,7 @@ const Playlist = () => {
         <ListBloc>
           {play.map(item => (
             <List
-              onClick={() => handlePic(item.id.videoId)}
+              onClick={() => handlePic(item.id.videoId, item)}
               key={item.snippet.title}
             >
               <Thumbnail src={item.snippet.thumbnails.default.url} />
