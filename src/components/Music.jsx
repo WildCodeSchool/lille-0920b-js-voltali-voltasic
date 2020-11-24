@@ -45,10 +45,6 @@ const Music = () => {
     }
   };
 
-  const Lecteur = styled.div`
-    margin-left: 30%;
-  `;
-
   const FirstLine = styled.div`
     display: flex;
     justify-content: flex-start;
@@ -86,7 +82,7 @@ const Music = () => {
   `;
 
   return (
-    <Lecteur>
+    <div className="lecteur">
       <h1>{location.state.title}</h1>
       <ReactPlayer
         ref={inputRange}
@@ -97,13 +93,18 @@ const Music = () => {
         playing={playing}
         loop={loop}
         onProgress={handleProgress}
+        height="0px"
       />
       <FirstLine>
         <Button className="play_button" onClick={handlePlayPause}>
-          {playing ? <i class="fas fa-pause"></i> : <i class="fas fa-play"></i>}
+          {playing ? (
+            <i className="fas fa-pause"></i>
+          ) : (
+            <i className="fas fa-play"></i>
+          )}
         </Button>
         <LabelLoop htmlFor="loop">
-          <i class="fas fa-undo"></i>
+          <i className="fas fa-undo"></i>
         </LabelLoop>
         <input
           id="loop"
@@ -112,7 +113,7 @@ const Music = () => {
           onChange={handleToggleLoop}
         />
         <LabelVolume htmlFor="volume">
-          <i class="fas fa-volume-up"></i>
+          <i className="fas fa-volume-up"></i>
         </LabelVolume>
         <Volume
           type="range"
@@ -123,7 +124,7 @@ const Music = () => {
           onChange={handleVolume}
         />
       </FirstLine>
-    </Lecteur>
+    </div>
   );
 };
 

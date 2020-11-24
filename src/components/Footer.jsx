@@ -100,7 +100,7 @@ const Footer = () => {
           <i className="far fa-address-book" />
         </Cgu>
         <LienMob to="/">
-          <i class="fas fa-users"></i>
+          <i className="fas fa-users"></i>
         </LienMob>
       </MobilBox>
     </Box>

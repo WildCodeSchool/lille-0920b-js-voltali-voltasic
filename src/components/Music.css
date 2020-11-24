@@ -47,6 +47,10 @@ progress::-moz-progress-bar {
     border-radius: 50%;
     border: 0 !important;
   }
+
+  .lecteur {
+    margin-left: 30%;
+  }
 }
 
 input[type="range"]::-moz-range-progress {
