@@ -48,6 +48,7 @@ const ListBloc = styled.div`
   ::-webkit-scrollbar {
     //chrome
     background-color: black;
+    visibility: hidden;
   }
   @media screen and (max-width: 601px) {
     width: 90%;
@@ -64,6 +65,7 @@ const List = styled.div`
   display: flex;
   align-items: center;
   background-color: black;
+  cursor: pointer;
   padding: 2%;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   :hover {
