@@ -23,19 +23,6 @@ const Music = ({ id }) => {
     setLoop(!loop);
   };
 
-  const handleSeekMouseDown = (e) => {
-    setSeeking(true);
-  };
-
-  const handleSeekChange = (e) => {
-    setPlayed(parseFloat(e.target.value));
-  };
-
-  const handleSeekMouseUp = (e) => {
-    setSeeking(false);
-    inputRange.current.seekTo(parseFloat(e.target.value));
-  };
-
   const handleProgress = (state) => {
     if (!seeking) {
       setPlayed(state.played);
@@ -54,17 +41,21 @@ const Music = ({ id }) => {
       margin-bottom: 5vh;
     }
   `;
+  const I = styled.i`
+    color: yellow;
+  `;
 
   const Button = styled.button`
     border: 1px solid black;
     border-radius: 10px;
     background-color: #1e1e20;
-    color: yellow;
     width: 5vw;
     height: 5vh;
     :hover {
       background-color: yellow;
-      color: #1e1e20;
+      ${I} {
+        color: #1e1e20;
+      }
     }
     @media screen and (max-width: 450px) {
       width: 50vw;
@@ -121,9 +112,9 @@ const Music = ({ id }) => {
       <AjustButton>
         <Button className="play_button" onClick={handlePlayPause}>
           {playing ? (
-            <i className="fas fa-pause"></i>
+            <I className="fas fa-pause"></I>
           ) : (
-            <i className="fas fa-play"></i>
+            <I className="fas fa-play"></I>
           )}
         </Button>
         <LabelLoop htmlFor="loop">
