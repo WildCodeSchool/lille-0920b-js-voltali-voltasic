@@ -64,11 +64,11 @@ const Music = ({ id }) => {
   `;
   const LabelVolume = styled.label`
     font-size: 4vh;
-    margin-left: 8%;
+    margin-left: 18%;
   `;
   const Volume = styled.input`
     height: 3vh;
-    margin-left: 7%;
+    margin-left: 3%;
   `;
 
   const AjustButton = styled.div`
@@ -76,7 +76,6 @@ const Music = ({ id }) => {
     align-items: center;
     margin-right: 10%;
     width: 50vw;
-    border: 1px solid red;
   `;
 
   return (
