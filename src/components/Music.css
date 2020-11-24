@@ -55,6 +55,12 @@ progress::-moz-progress-bar {
     width: 95.9%;
     border: solid 1px yellow;
   }
+  @media screen and (max-width: 450px) {
+    .lecteur {
+      display: flex;
+      flex-direction: column;
+    }
+  }
 }
 
 input[type="range"]::-moz-range-progress {
