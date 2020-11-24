@@ -7,14 +7,16 @@ import { getYoutube } from "../../api/youtubeApiCall";
 
 const Main = styled.div`
   margin-top: 10vh;
-  height: 110vh;
+  height: 90vh;
   background-color: black;
   color: white;
   @media screen and (max-width: 501px) {
+    height: 110vh;
     margin-left: 10px;
   }
 `;
 const Title = styled.h1`
+  padding: 2%;
   font-size: 25pt;
   background-color: black;
   @media screen and (max-width: 501px) {
@@ -27,19 +29,16 @@ const Container = styled.div`
   background-color: black;
   justify-content: center;
   align-items: center;
-  border: 1px solid red;
   @media screen and (max-width: 601px) {
     flex-direction: column-reverse;
   }
 `;
 
 const ListBloc = styled.div`
-  border: 1px solid green;
   width: 40%;
-  margin-top: 5vh;
+  margin-top: 3vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   padding: 1%;
   background-color: black;
   height: 450px;
@@ -60,7 +59,7 @@ const P = styled.p`
 `;
 
 const List = styled.div`
-  width: 90%;
+  width: 100%;
   height: 100%;
   display: flex;
   align-items: center;

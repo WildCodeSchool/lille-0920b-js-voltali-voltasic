@@ -16,7 +16,6 @@ const App = () => {
   return (
     <div className="App">
       <Nav />
-      {idVideo && <Music id={idVideo} />}
       <Switch>
         <Route
           exact
@@ -33,6 +32,7 @@ const App = () => {
           render={() => <Playlist changeVideo={setIdVideo} />}
         />
       </Switch>
+      {idVideo && <Music id={idVideo} />}
       <Footer />
     </div>
   );
