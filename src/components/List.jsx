@@ -20,6 +20,7 @@ const MusicItem = styled.div`
   background: none;
   transition: 0.5s ease;
   margin-bottom: 3%;
+  width: 70%;
   @media (max-width: 1100px) {
     width: 70%;
   }
