@@ -48,14 +48,14 @@ export const I = styled.i`
   text-shadow: black 0.1em 0.1em 0.6em;
   font-size: 25pt;
   top: 40%;
-  visibility: hidden;
+  visibility: visible;
 `;
 
 export const Container = styled.div`
   position: relative;
   justify-content: center;
   :hover {
-    ${Filter}, ${I} {
+    ${Filter} {
       visibility: visible;
       opacity: 1;
     }

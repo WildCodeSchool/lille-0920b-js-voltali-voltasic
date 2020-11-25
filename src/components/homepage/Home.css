@@ -20,6 +20,12 @@ button.rec-dot {
   color: yellow;
   border-radius: 5px;
 }
+@media screen and (max-width: 501px) {
+  .rec.rec-arrow.rec.rec-arrow-right,
+  .rec.rec-arrow.rec.rec-arrow-left {
+    background-color: rgba(253, 250, 250, 0);
+  }
+}
 
 .rec.rec-arrow.rec.rec-arrow-right:hover,
 .rec.rec-arrow.rec.rec-arrow-left:hover {
