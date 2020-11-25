@@ -19,32 +19,48 @@ progress::-moz-progress-bar {
   border-radius: 20px;
 }
 
+.playerNotShow {
+  height: 0;
+}
 /*Chrome*/
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   input[type="range"] {
     overflow: hidden;
-    width: 400px;
-    color: rgba(0, 100, 180, 1);
-    border: 1px solid black;
+    width: 20%;
+    color: yellow;
+    background-color: #1e1e20;
     -webkit-appearance: none;
   }
   input[type="range"]::-webkit-slider-runnable-track {
-    height: 10px;
+    height: 2px;
     -webkit-appearance: none;
-    color: rgba(0, 100, 180, 1);
-    margin-top: -1px;
+    background-color: yellow;
   }
   input[type="range"]::-webkit-slider-thumb {
-    width: 10px;
+    width: 5%;
     -webkit-appearance: none;
     height: 10px;
     cursor: ew-resize;
-    background: #434343;
-    box-shadow: -405px 0 0 400px rgba(0, 100, 180, 1);
-    /* box-shadow: 0 0 0 6px rgba(0, 0, 0, 0.3); */
+    background: white;
     border-radius: 50%;
-    border: 0 !important;
+    border: 1px black solid;
+    margin-top: -2%;
+  }
+}
+
+.lecteur {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+  width: 95.9%;
+  border: solid 1px yellow;
+}
+@media screen and (max-width: 450px) {
+  .lecteur {
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -55,12 +71,12 @@ input[type="range"]::-moz-range-progress {
 /** FF*/
 
 input[type="range"]::-moz-range-progress {
-  background-color: rgba(0, 100, 180, 1);
+  background-color: yellow;
   border: 1px;
 }
 
 input[type="range"]::-moz-range-track {
-  background-color: grey;
+  background-color: #1e1e20;
   border: 1px;
 }
 
