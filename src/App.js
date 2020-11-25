@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { Switch, Route } from "react-router-dom";
 
+import Home from "./components/homepage/Home";
+import Nav from "./components/Nav";
 import List from "./components/List";
 import Music from "./components/Music";
-import Nav from "./components/Nav";
-import Home from "./components/homepage/Home";
+import Playlist from "./components/artists/Playlist";
 import Footer from "./components/Footer";
 
 import "./App.css";
@@ -15,7 +16,6 @@ const App = () => {
   return (
     <div className="App">
       <Nav />
-      {idVideo && <Music id={idVideo} />}
       <Switch>
         <Route
           exact
@@ -27,7 +27,12 @@ const App = () => {
           path="/List"
           render={() => <List changeVideo={setIdVideo} />}
         />
+        <Route
+          path="/playlist/:id"
+          render={() => <Playlist changeVideo={setIdVideo} />}
+        />
       </Switch>
+      {idVideo && <Music id={idVideo} />}
       <Footer />
     </div>
   );

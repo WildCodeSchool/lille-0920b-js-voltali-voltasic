@@ -1,8 +1,15 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Carousel from "react-elastic-carousel";
 
 import mock from "./../../api/mock.json";
-import { Main, Title, SongTitles, Img, DivImg } from "./CarouselStyled";
+import {
+  Main,
+  Title,
+  SongTitles,
+  Img,
+  DivImg,
+} from "../homepage/CarouselStyled";
 
 const breakPoints = [
   { width: 1, itemsToShow: 1 },
@@ -26,13 +33,20 @@ const TrendArtists = () => {
     <Main>
       <Title>Artistes du moment</Title>
       <Carousel breakPoints={breakPoints}>
-        {data.map((item) => (
+        {data.map(item => (
           <DivImg key={item.id.videoId}>
-            <Img
-              src={item.snippet.thumbnails.channelPic.url}
-              alt={item.snippet.channelTitle}
-            />
-            <SongTitles>{item.snippet.channelTitle}</SongTitles>
+            <Link
+              to={{
+                pathname: `/playlist/${item.snippet.channelId}`,
+                state: { item: item },
+              }}
+            >
+              <Img
+                src={item.snippet.thumbnails.channelPic.url}
+                alt={item.snippet.channelTitle}
+              />
+              <SongTitles>{item.snippet.channelTitle}</SongTitles>
+            </Link>
           </DivImg>
         ))}
       </Carousel>

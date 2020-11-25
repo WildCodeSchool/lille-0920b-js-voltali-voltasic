@@ -15,7 +15,7 @@ const breakPoints = [
 const MyCarousel = ({ category, changeVideo }) => {
   const [items, setItems] = useState([]);
 
-  const trend = async (value) => {
+  const trend = async value => {
     const myItems = await getYoutube(value);
     setItems(myItems.items);
   };
@@ -28,7 +28,7 @@ const MyCarousel = ({ category, changeVideo }) => {
     <Main>
       <Title>{category.title}</Title>
       <Carousel breakPoints={breakPoints}>
-        {items.map((item) => (
+        {items.map(item => (
           <DivImg key={item.id.videoId} onClick={() => changeVideo(item)}>
             <Image
               src={item.snippet.thumbnails.medium.url}

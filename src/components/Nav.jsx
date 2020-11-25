@@ -4,14 +4,17 @@ import { Link } from "react-router-dom";
 import Search from "./Search";
 
 const NavBar = styled.div`
+  position: fixed;
+  top: 0;
+  background-color: #1e1e20;
   display: flex;
   width: 100%;
   height: 10vh;
   justify-content: space-around;
-  border-bottom: 2px solid yellow;
   color: #fff;
+  z-index: 1;
   @media (max-width: 500px) {
-    border-bottom: 1px solid yellow;
+    background-image: none;
   }
 `;
 
