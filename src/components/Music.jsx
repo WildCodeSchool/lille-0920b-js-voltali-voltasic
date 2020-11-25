@@ -16,14 +16,14 @@ const Music = ({ id }) => {
   const handlePlayPause = () => {
     setPlaying(!playing);
   };
-  const handleVolume = (e) => {
+  const handleVolume = e => {
     setVolume(parseFloat(e.target.value));
   };
   const handleToggleLoop = () => {
     setLoop(!loop);
   };
 
-  const handleProgress = (state) => {
+  const handleProgress = state => {
     if (!seeking) {
       setPlayed(state.played);
     }
@@ -46,7 +46,7 @@ const Music = ({ id }) => {
   `;
 
   const Button = styled.button`
-    border: 1px solid black;
+    border: 1px solid yellow;
     border-radius: 10px;
     background-color: #1e1e20;
     width: 5vw;
