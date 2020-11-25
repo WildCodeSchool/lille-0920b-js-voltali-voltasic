@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import styled from "styled-components";
+import VideoPlayer from "../VideoPlayer";
 
 import { getYoutube } from "../../api/youtubeApiCall";
 
@@ -66,12 +67,17 @@ const List = styled.div`
   align-items: center;
   background-color: black;
   cursor: pointer;
-  padding: 2%;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   :hover {
     background-color: #1e1e20;
     ${P} {
       background-color: #1e1e20;
+    }
+    :focus {
+      background-color: #1e1e20;
+      ${P} {
+        background-color: #1e1e20;
+      }
     }
   }
 `;
@@ -103,8 +109,8 @@ const Playlist = ({ changeVideo }) => {
   };
 
   const handlePic = (id, item) => {
-    const url = `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
-    setPic(url);
+    //const url = `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
+    setPic(item);
     changeVideo(item);
   };
 
@@ -128,7 +134,7 @@ const Playlist = ({ changeVideo }) => {
             </List>
           ))}
         </ListBloc>
-        {pic && <Img src={pic} />}
+        {pic && <VideoPlayer id={pic} />}
       </Container>
     </Main>
   );

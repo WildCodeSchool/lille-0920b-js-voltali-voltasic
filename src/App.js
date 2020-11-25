@@ -12,6 +12,7 @@ import "./App.css";
 
 const App = () => {
   const [idVideo, setIdVideo] = useState();
+  const [idVid, setIdVid] = useState();
 
   return (
     <div className="App">
@@ -29,7 +30,7 @@ const App = () => {
         />
         <Route
           path="/playlist/:id"
-          render={() => <Playlist changeVideo={setIdVideo} />}
+          render={() => <Playlist changeVideo={setIdVid} />}
         />
       </Switch>
       {idVideo && <Music id={idVideo} />}
