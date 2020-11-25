@@ -48,7 +48,7 @@ const MyCarousel = ({ category, changeVideo }) => {
                 <I className="fas fa-play"></I>
               </Filter>
             </Container>
-            <SongTitles>{item.snippet.title}</SongTitles>
+            <SongTitles>{item.snippet.title.replace("clip", " ")}</SongTitles>
           </DivImg>
         ))}
       </Carousel>

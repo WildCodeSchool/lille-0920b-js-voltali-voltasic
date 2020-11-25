@@ -6,7 +6,7 @@ import mock from "./../../api/mock.json";
 import {
   Main,
   Title,
-  SongTitles,
+  SongTitle,
   Img,
   DivImg,
 } from "../homepage/CarouselStyled";
@@ -45,7 +45,7 @@ const TrendArtists = () => {
                 src={item.snippet.thumbnails.channelPic.url}
                 alt={item.snippet.channelTitle}
               />
-              <SongTitles>{item.snippet.channelTitle}</SongTitles>
+              <SongTitle>{item.snippet.channelTitle}</SongTitle>
             </Link>
           </DivImg>
         ))}
