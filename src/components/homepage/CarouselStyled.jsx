@@ -29,7 +29,8 @@ export const Img = styled.img`
 `;
 
 export const Image = styled.img`
-  border: 1px solid blue;
+  width: 100%;
+  height: 180px;
 `;
 
 export const Filter = styled.div`
@@ -55,7 +56,6 @@ export const I = styled.i`
 
 export const Container = styled.div`
   position: relative;
-  border: 1px solid red;
   align-items: center;
   justify-content: center;
   :hover {
