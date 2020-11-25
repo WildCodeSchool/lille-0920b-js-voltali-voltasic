@@ -28,7 +28,9 @@ export const Img = styled.img`
   clip-path: ellipse(50% 50%);
 `;
 
-export const Image = styled.img``;
+export const Image = styled.img`
+  border: 1px solid blue;
+`;
 
 export const Filter = styled.div`
   position: absolute;
@@ -53,6 +55,8 @@ export const I = styled.i`
 
 export const Container = styled.div`
   position: relative;
+  border: 1px solid red;
+  align-items: center;
   justify-content: center;
   :hover {
     ${Filter} {
