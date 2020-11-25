@@ -1,7 +1,16 @@
 import React, { useEffect, useState } from "react";
 import Carousel from "react-elastic-carousel";
 
-import { Main, Title, SongTitles, DivImg, Image } from "./CarouselStyled";
+import {
+  Main,
+  Title,
+  SongTitles,
+  DivImg,
+  Image,
+  Container,
+  Filter,
+  I,
+} from "./CarouselStyled";
 
 import { getYoutube } from "../../api/youtubeApiCall";
 
@@ -30,10 +39,15 @@ const MyCarousel = ({ category, changeVideo }) => {
       <Carousel breakPoints={breakPoints}>
         {items.map(item => (
           <DivImg key={item.id.videoId} onClick={() => changeVideo(item)}>
-            <Image
-              src={item.snippet.thumbnails.medium.url}
-              alt={item.snippet.title}
-            />
+            <Container>
+              <Image
+                src={item.snippet.thumbnails.medium.url}
+                alt={item.snippet.title}
+              />
+              <Filter>
+                <I className="fas fa-play"></I>
+              </Filter>
+            </Container>
             <SongTitles>{item.snippet.title}</SongTitles>
           </DivImg>
         ))}

@@ -9,7 +9,7 @@ const List = ({ changeVideo }) => {
 
   const location = useLocation();
 
-  const handleSearch = async (inputValue) => {
+  const handleSearch = async inputValue => {
     const myData = await getYoutube(inputValue);
     setItems(myData.items);
   };
@@ -21,9 +21,9 @@ const List = ({ changeVideo }) => {
   }, [location.state.query]);
   return (
     <div>
-      {items.map((item) => (
+      {items.map(item => (
         <div onClick={() => changeVideo(item)} key={item.id.videoId}>
-          <p>{item.snippet.title}</p>
+          <p className="title">{item.snippet.title}</p>
 
           <img
             src={item.snippet.thumbnails.medium.url}

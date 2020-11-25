@@ -14,33 +14,33 @@ const Music = ({ id }) => {
   const handlePlayPause = () => {
     setPlaying(!playing);
   };
-  const handleVolume = (e) => {
+  const handleVolume = e => {
     setVolume(parseFloat(e.target.value));
   };
   const handleToggleLoop = () => {
     setLoop(!loop);
   };
 
-  const handleSeekMouseDown = (e) => {
+  const handleSeekMouseDown = e => {
     setSeeking(true);
   };
 
-  const handleSeekChange = (e) => {
+  const handleSeekChange = e => {
     setPlayed(parseFloat(e.target.value));
   };
 
-  const handleSeekMouseUp = (e) => {
+  const handleSeekMouseUp = e => {
     setSeeking(false);
     inputRange.current.seekTo(parseFloat(e.target.value));
   };
 
-  const handleProgress = (state) => {
+  const handleProgress = state => {
     if (!seeking) {
       setPlayed(state.played);
     }
   };
   return (
-    <div>
+    <div className="container">
       <h1>{id.snippet.title}</h1>
       <ReactPlayer
         ref={inputRange}
