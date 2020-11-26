@@ -20,12 +20,12 @@ const App = () => {
         <Route
           exact
           path="/"
-          render={() => <Home changeVideo={setIdVideo} />}
+          render={() => <Home changeVideo={setIdVideo} setIdVid={setIdVid} />}
         />
         <Route
           exact
           path="/List"
-          render={() => <List changeVideo={setIdVideo} />}
+          render={() => <List changeVideo={setIdVideo} setIdVid={setIdVid} />}
         />
         <Route
           path="/playlist/:id"
