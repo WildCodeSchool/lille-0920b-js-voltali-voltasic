@@ -73,13 +73,17 @@ const List = styled.div`
     ${P} {
       background-color: #1e1e20;
     }
-    :focus {
-      background-color: #1e1e20;
-      ${P} {
-        background-color: #1e1e20;
-      }
-    }
   }
+`;
+
+const ListSelect = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #1e1e20;
+  cursor: pointer;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 `;
 
 const Thumbnail = styled.img`
