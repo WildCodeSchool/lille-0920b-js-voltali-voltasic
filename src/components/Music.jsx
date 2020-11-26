@@ -34,7 +34,6 @@ const Music = ({ id }) => {
   };
 
   const SongTitle = styled.h1`
-    border: 1px solid red;
     font-size: 15pt;
     color: white;
     margin-right: -15vw;

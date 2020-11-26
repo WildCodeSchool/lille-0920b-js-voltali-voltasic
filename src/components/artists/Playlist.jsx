@@ -113,7 +113,6 @@ const Playlist = ({ changeVideo }) => {
   };
 
   const handlePic = (id, item) => {
-    //const url = `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
     setPic(item);
     changeVideo(item);
   };
