@@ -4,7 +4,7 @@ import "./List.css";
 
 import { getYoutube } from "../api/youtubeApiCall";
 
-const List = ({ changeVideo }) => {
+const List = ({ changeVideo, setIdVid }) => {
   const [items, setItems] = useState([]);
 
   const location = useLocation();
@@ -23,10 +23,15 @@ const List = ({ changeVideo }) => {
   const regex = /&amp;/gi;
   const clip = /clip officiel/gi;
 
+  const play = item => {
+    changeVideo(item);
+    setIdVid(false);
+  };
+
   return (
     <div>
       {items.map(item => (
-        <div onClick={() => changeVideo(item)} key={item.id.videoId}>
+        <div onClick={() => play(item)} key={item.id.videoId}>
           <p>
             {item.snippet.title
               .replace(regex, "&")

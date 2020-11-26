@@ -12,7 +12,7 @@ const breakPoints = [
   { width: 1200, itemsToShow: 4 },
 ];
 
-const MyCarousel = ({ category, changeVideo }) => {
+const MyCarousel = ({ category, changeVideo, setIdVid }) => {
   const [items, setItems] = useState([]);
 
   const trend = async value => {
@@ -27,12 +27,16 @@ const MyCarousel = ({ category, changeVideo }) => {
   const regex = /&amp;/gi;
   const clip = /clip officiel/gi;
 
+  const play = item => {
+    changeVideo(item);
+    setIdVid(false);
+  };
   return (
     <Main>
       <Title>{category.title}</Title>
       <Carousel breakPoints={breakPoints}>
         {items.map(item => (
-          <DivImg key={item.id.videoId} onClick={() => changeVideo(item)}>
+          <DivImg key={item.id.videoId} onClick={() => play(item)}>
             <Image
               src={item.snippet.thumbnails.medium.url}
               alt={item.snippet.title}

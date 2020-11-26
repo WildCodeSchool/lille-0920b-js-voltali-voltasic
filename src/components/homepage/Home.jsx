@@ -28,7 +28,7 @@ const myTypes = [
   },
 ];
 
-const Home = ({ changeVideo }) => {
+const Home = ({ changeVideo, setIdVid }) => {
   return (
     <>
       <TrendArtists />
@@ -37,6 +37,7 @@ const Home = ({ changeVideo }) => {
           key={item.title}
           category={item}
           changeVideo={changeVideo}
+          setIdVid={setIdVid}
         />
       ))}
     </>
