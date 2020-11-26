@@ -4,7 +4,6 @@ import { Switch, Route } from "react-router-dom";
 import Home from "./components/homepage/Home";
 import Nav from "./components/Nav";
 import List from "./components/List";
-import Music from "./components/Music";
 import Playlist from "./components/artists/Playlist";
 import Footer from "./components/Footer";
 
@@ -12,6 +11,7 @@ import "./App.css";
 
 const App = () => {
   const [idVideo, setIdVideo] = useState();
+  const [idVid, setIdVid] = useState();
 
   return (
     <div className="App">
@@ -20,20 +20,19 @@ const App = () => {
         <Route
           exact
           path="/"
-          render={() => <Home changeVideo={setIdVideo} />}
+          render={() => <Home changeVideo={setIdVideo} setIdVid={setIdVid} />}
         />
         <Route
           exact
           path="/List"
-          render={() => <List changeVideo={setIdVideo} />}
+          render={() => <List changeVideo={setIdVideo} setIdVid={setIdVid} />}
         />
         <Route
           path="/playlist/:id"
-          render={() => <Playlist changeVideo={setIdVideo} />}
+          render={() => <Playlist changeVideo={setIdVid} />}
         />
       </Switch>
-      {idVideo && <Music id={idVideo} />}
-      <Footer />
+      <Footer idVideo={idVideo} idVid={idVid} />
     </div>
   );
 };

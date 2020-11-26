@@ -36,20 +36,36 @@ const Music = ({ id }) => {
   const SongTitle = styled.h1`
     font-size: 15pt;
     color: white;
+    margin-right: -15vw;
+    min-width: 45%;
     @media screen and (max-width: 450px) {
       font-size: 10pt;
-      margin-bottom: 5vh;
+      margin-bottom: 1vh;
     }
   `;
   const I = styled.i`
     color: white;
+    cursor: pointer;
+  `;
+
+  const IChevron = styled.i`
+    color: white;
+    cursor: pointer;
+    @media screen and (max-width: 800px) {
+      display: none;
+    }
+  `;
+
+  const Ino = styled.i`
+    color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
   `;
 
   const Button = styled.button`
     border: 1px solid yellow;
     border-radius: 10px;
     background-color: #1e1e20;
-    width: 5vw;
+    width: 15vw;
     height: 5vh;
     :hover {
       background-color: yellow;
@@ -57,30 +73,29 @@ const Music = ({ id }) => {
         color: #1e1e20;
       }
     }
-    @media screen and (max-width: 450px) {
-      width: 50vw;
+    @media screen and (max-width: 500px) {
+      width: 30vw;
       height: 5vh;
-      margin-right: 20vw;
       margin-left: 5vw;
     }
   `;
   const LabelLoop = styled.label`
     font-size: 2vh;
-    margin-left: 2%;
+    margin-left: 15%;
     font-size: 3vh;
   `;
 
   const LabelVolume = styled.label`
     font-size: 4vh;
     margin-left: 18%;
-    @media screen and (max-width: 450px) {
+    @media screen and (max-width: 800px) {
       display: none;
     }
   `;
   const Volume = styled.input`
     height: 3vh;
     margin-left: 3%;
-    @media screen and (max-width: 450px) {
+    @media screen and (max-width: 800px) {
       display: none;
     }
   `;
@@ -96,9 +111,25 @@ const Music = ({ id }) => {
     }
   `;
 
+  const Checkbox = styled.input`
+    visibility: hidden;
+  `;
+
+  const regex = /&amp;/gi;
+  const clip = /clip officiel/gi;
+
   return (
     <div className="lecteur">
-      <SongTitle>{id.snippet.title}</SongTitle>
+      {!display && (
+        <SongTitle>
+          {id.snippet.title
+            .replace(regex, "&")
+            .replace(clip, " ")
+            .replace(/\(|\)/g, "")
+            .replace(/\[|\]/g, "")}
+        </SongTitle>
+      )}
+
       <ReactPlayer
         ref={inputRange}
         url={`https://www.youtube.com/watch?v=${id.id.videoId} `}
@@ -107,7 +138,7 @@ const Music = ({ id }) => {
         playing={playing}
         loop={loop}
         onProgress={handleProgress}
-        height={display ? "20vh" : "0px"}
+        height={display ? "10vh" : "0px"}
       />
       <AjustButton>
         <Button className="play_button" onClick={handlePlayPause}>
@@ -118,9 +149,13 @@ const Music = ({ id }) => {
           )}
         </Button>
         <LabelLoop htmlFor="loop">
-          <I className="fas fa-undo"></I>
+          {loop ? (
+            <I className="fas fa-undo"></I>
+          ) : (
+            <Ino className="fas fa-undo"></Ino>
+          )}
         </LabelLoop>
-        <input
+        <Checkbox
           id="loop"
           type="checkbox"
           checked={loop}
@@ -137,10 +172,10 @@ const Music = ({ id }) => {
           step="any"
           onChange={handleVolume}
         />
-        <I
+        <IChevron
           className={display ? "fas fa-chevron-up" : "fas fa-chevron-down"}
           onClick={handleDisplay}
-        ></I>
+        ></IChevron>
       </AjustButton>
     </div>
   );

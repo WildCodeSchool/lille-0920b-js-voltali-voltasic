@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import Music from "./Music";
 
 const Box = styled.div`
   @media screen and (min-width: 501px) {
@@ -46,9 +47,9 @@ const MobilBox = styled.div`
   @media screen and (max-width: 500px) {
     width: 100%;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 100%;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
   }
   @media screen and (min-width: 501px) {
     display: none;
@@ -79,29 +80,15 @@ const Cgu = styled.a`
   }
 `;
 
-const Footer = () => {
+const Footer = ({ idVideo, idVid }) => {
   return (
     <Box>
       <DeskBox>
         <Cgu href="./cgu.pdf" target="_blank">
           CGU
         </Cgu>
-
-        <Lien to="/">Contact</Lien>
-
-        <Lien to="/">Settings</Lien>
       </DeskBox>
-      <MobilBox>
-        <LienMob to="/">
-          <i className="fas fa-home" />
-        </LienMob>
-        <Cgu href="./cgu.pdf">
-          <i className="far fa-address-book" />
-        </Cgu>
-        <LienMob to="/">
-          <i className="fas fa-cog" />
-        </LienMob>
-      </MobilBox>
+      {idVideo && !idVid && <Music id={idVideo} />}
     </Box>
   );
 };

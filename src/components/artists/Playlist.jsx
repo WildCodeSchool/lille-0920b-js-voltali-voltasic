@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import styled from "styled-components";
+import VideoPlayer from "../VideoPlayer";
 
 import { getYoutube } from "../../api/youtubeApiCall";
 
@@ -66,7 +67,6 @@ const List = styled.div`
   align-items: center;
   background-color: black;
   cursor: pointer;
-  padding: 2%;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   :hover {
     background-color: #1e1e20;
@@ -74,6 +74,16 @@ const List = styled.div`
       background-color: #1e1e20;
     }
   }
+`;
+
+const ListSelect = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #1e1e20;
+  cursor: pointer;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 `;
 
 const Thumbnail = styled.img`
@@ -103,14 +113,16 @@ const Playlist = ({ changeVideo }) => {
   };
 
   const handlePic = (id, item) => {
-    const url = `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
-    setPic(url);
+    setPic(item);
     changeVideo(item);
   };
 
   useEffect(() => {
     getPlay(location.state.item.snippet.channelTitle);
   }, []);
+
+  const regex = /&amp;/gi;
+  const clip = /clip officiel/gi;
 
   return (
     <Main>
@@ -124,11 +136,17 @@ const Playlist = ({ changeVideo }) => {
             >
               <Thumbnail src={item.snippet.thumbnails.default.url} />
 
-              <P>{item.snippet.title}</P>
+              <P>
+                {item.snippet.title
+                  .replace(regex, "&")
+                  .replace(clip, " ")
+                  .replace(/\(|\)/g, "")
+                  .replace(/\[|\]/g, "")}
+              </P>
             </List>
           ))}
         </ListBloc>
-        {pic && <Img src={pic} />}
+        {pic && <VideoPlayer id={pic} />}
       </Container>
     </Main>
   );
