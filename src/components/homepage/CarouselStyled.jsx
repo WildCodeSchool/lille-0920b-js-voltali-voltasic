@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Main = styled.div`
-  padding: 1%;
   background-color: black;
+  padding-bottom: 10%;
 `;
 
 export const Title = styled.h2`
