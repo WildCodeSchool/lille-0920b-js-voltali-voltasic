@@ -6,10 +6,12 @@ import "./Music.css";
 
 const I = styled.i`
   color: white;
+  cursor: pointer;
 `;
 
 const Ino = styled.i`
   color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
 `;
 
 const LabelVolume = styled.label`

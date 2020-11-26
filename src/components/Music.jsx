@@ -43,6 +43,12 @@ const Music = ({ id }) => {
   `;
   const I = styled.i`
     color: white;
+    cursor: pointer;
+  `;
+
+  const Ino = styled.i`
+    color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
   `;
 
   const Button = styled.button`
@@ -96,9 +102,22 @@ const Music = ({ id }) => {
     }
   `;
 
+  const Checkbox = styled.input`
+    visibility: hidden;
+  `;
+
+  const regex = /&amp;/gi;
+  const clip = /clip officiel/gi;
+
   return (
     <div className="lecteur">
-      <SongTitle>{id.snippet.title}</SongTitle>
+      <SongTitle>
+        {id.snippet.title
+          .replace(regex, "&")
+          .replace(clip, " ")
+          .replace(/\(|\)/g, "")
+          .replace(/\[|\]/g, "")}
+      </SongTitle>
       <ReactPlayer
         ref={inputRange}
         url={`https://www.youtube.com/watch?v=${id.id.videoId} `}
@@ -118,9 +137,13 @@ const Music = ({ id }) => {
           )}
         </Button>
         <LabelLoop htmlFor="loop">
-          <I className="fas fa-undo"></I>
+          {loop ? (
+            <I className="fas fa-undo"></I>
+          ) : (
+            <Ino className="fas fa-undo"></Ino>
+          )}
         </LabelLoop>
-        <input
+        <Checkbox
           id="loop"
           type="checkbox"
           checked={loop}
