@@ -22,6 +22,18 @@ export const SongTitles = styled.p`
   top: 45%;
 `;
 
+export const SongTitle = styled.p`
+  color: grey;
+  font-size: 12pt;
+  text-shadow: black 0.1em 0.1em 0.2em;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-decoration-color: black;
+  background-color: rgba(255, 255, 255, 0);
+  top: 45%;
+`;
+
 export const Img = styled.img`
   width: 150px;
   clip-path: ellipse(50% 50%);
