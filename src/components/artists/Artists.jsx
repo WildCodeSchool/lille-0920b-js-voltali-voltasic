@@ -28,11 +28,14 @@ const TrendArtists = () => {
     padding-left: 1%;
     padding-right: 1%;
     @media screen and (max-width: 500px) {
-      padding-top: 8%;
+      padding-top: 15%;
     }
     @media screen and (min-width: 501px) {
       background-color: black;
       padding-top: 5%;
+    }
+    @media screen and (max-width: 800px) {
+      padding-top: 15%;
     }
   `;
 

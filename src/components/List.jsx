@@ -20,15 +20,16 @@ const H1 = styled.h1`
   color: white;
   width: 50%;
   text-align: start;
-  padding-top: 3%;
+
   @media screen and (max-width: 500px) {
-    padding-top: 8%;
+    padding-top: 15%;
   }
   @media screen and (min-width: 501px) {
     background-color: black;
     padding-top: 10%;
   }
   @media (max-width: 800px) {
+    width: 90%;
     font-size: 18pt;
   }
 `;
@@ -68,12 +69,14 @@ const MusicItem = styled.div`
     width: 90%;
     justify-content: flex-end;
     padding-right: 0%;
+    margin-left: 5%;
+    padding-bottom: 8%;
   }
   @media (max-width: 650px) {
     width: 90%;
     flex-direction: column;
     padding-right: 0%;
-    margin-left: 1%;
+    margin-left: 5%;
   }
 `;
 

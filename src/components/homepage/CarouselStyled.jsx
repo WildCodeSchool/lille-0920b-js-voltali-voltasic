@@ -7,7 +7,7 @@ export const Main = styled.div`
   background-color: black;
   padding-bottom: 10%;
   @media (max-width: 800px) {
-    padding-bottom: 35%;
+    padding-bottom: 15%;
   }
 `;
 
@@ -59,7 +59,6 @@ export const DivImg = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
   :hover {
     ${SongTitles} {
       visibility: visible;
@@ -68,6 +67,9 @@ export const DivImg = styled.div`
     ${Image} {
       transform: scale(1.1);
     }
+  }
+  @media screen and (min-width: 700px) and (max-width: 800px) {
+    margin-right: 8%;
   }
 `;
 
