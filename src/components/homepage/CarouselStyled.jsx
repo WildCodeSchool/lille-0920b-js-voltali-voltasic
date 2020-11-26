@@ -37,6 +37,10 @@ export const SongTitle = styled.p`
 export const Img = styled.img`
   width: 150px;
   clip-path: ellipse(50% 50%);
+  transition: transform 0.2s;
+  :hover {
+    transform: scale(1.1);
+  }
 `;
 
 export const Image = styled.img`
