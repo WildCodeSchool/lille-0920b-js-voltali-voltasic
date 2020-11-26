@@ -16,14 +16,14 @@ const Music = ({ id }) => {
   const handlePlayPause = () => {
     setPlaying(!playing);
   };
-  const handleVolume = e => {
+  const handleVolume = (e) => {
     setVolume(parseFloat(e.target.value));
   };
   const handleToggleLoop = () => {
     setLoop(!loop);
   };
 
-  const handleProgress = state => {
+  const handleProgress = (state) => {
     if (!seeking) {
       setPlayed(state.played);
     }
@@ -36,9 +36,10 @@ const Music = ({ id }) => {
   const SongTitle = styled.h1`
     font-size: 15pt;
     color: white;
+    margin-right: -15vw;
     @media screen and (max-width: 450px) {
-      font-size: 10pt;
-      margin-bottom: 5vh;
+      font-size: 7pt;
+      margin-bottom: 1vh;
     }
   `;
   const I = styled.i`
@@ -55,7 +56,7 @@ const Music = ({ id }) => {
     border: 1px solid yellow;
     border-radius: 10px;
     background-color: #1e1e20;
-    width: 5vw;
+    width: 15vw;
     height: 5vh;
     :hover {
       background-color: yellow;
@@ -63,10 +64,9 @@ const Music = ({ id }) => {
         color: #1e1e20;
       }
     }
-    @media screen and (max-width: 450px) {
-      width: 50vw;
+    @media screen and (max-width: 500px) {
+      width: 30vw;
       height: 5vh;
-      margin-right: 20vw;
       margin-left: 5vw;
     }
   `;
@@ -126,7 +126,7 @@ const Music = ({ id }) => {
         playing={playing}
         loop={loop}
         onProgress={handleProgress}
-        height={display ? "20vh" : "0px"}
+        height={display ? "10vh" : "0px"}
       />
       <AjustButton>
         <Button className="play_button" onClick={handlePlayPause}>

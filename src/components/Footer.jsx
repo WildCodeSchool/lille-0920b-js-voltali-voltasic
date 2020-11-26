@@ -47,9 +47,9 @@ const MobilBox = styled.div`
   @media screen and (max-width: 500px) {
     width: 100%;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 100%;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
   }
   @media screen and (min-width: 501px) {
     display: none;
@@ -88,19 +88,8 @@ const Footer = ({ idVideo, idVid }) => {
         <Cgu href="./cgu.pdf" target="_blank">
           CGU
         </Cgu>
-        {idVideo && !idVid && <Music id={idVideo} />}
       </DeskBox>
-      <MobilBox>
-        <LienMob to="/">
-          <i className="fas fa-home" />
-        </LienMob>
-        <Cgu href="./cgu.pdf">
-          <i className="far fa-address-book" />
-        </Cgu>
-        <LienMob to="/">
-          <i className="fas fa-cog" />
-        </LienMob>
-      </MobilBox>
+      {idVideo && !idVid && <Music id={idVideo} />}
     </Box>
   );
 };

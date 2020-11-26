@@ -52,11 +52,10 @@ progress::-moz-progress-bar {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2%;
-  width: 95.9%;
-  border: solid 1px yellow;
+  padding: 5%;
+  width: 70%;
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 500px) {
   .lecteur {
     display: flex;
     flex-direction: column;
