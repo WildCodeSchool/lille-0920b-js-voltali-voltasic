@@ -2,8 +2,13 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Main = styled.div`
+  padding-left: 1%;
+  padding-right: 1%;
   background-color: black;
   padding-bottom: 10%;
+  @media (max-width: 800px) {
+    padding-bottom: 35%;
+  }
 `;
 
 export const Title = styled.h2`
