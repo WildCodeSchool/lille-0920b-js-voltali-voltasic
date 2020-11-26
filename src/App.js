@@ -4,7 +4,6 @@ import { Switch, Route } from "react-router-dom";
 import Home from "./components/homepage/Home";
 import Nav from "./components/Nav";
 import List from "./components/List";
-import Music from "./components/Music";
 import Playlist from "./components/artists/Playlist";
 import Footer from "./components/Footer";
 
@@ -33,8 +32,7 @@ const App = () => {
           render={() => <Playlist changeVideo={setIdVid} />}
         />
       </Switch>
-      {idVideo && !idVid && <Music id={idVideo} />}
-      <Footer />
+      <Footer idVideo={idVideo} idVid={idVid} />
     </div>
   );
 };

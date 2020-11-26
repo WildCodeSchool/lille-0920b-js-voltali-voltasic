@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import Music from "./Music";
 
 const Box = styled.div`
   @media screen and (min-width: 501px) {
@@ -79,17 +80,15 @@ const Cgu = styled.a`
   }
 `;
 
-const Footer = () => {
+const Footer = ({ idVideo, idVid }) => {
+  console.log(idVideo);
   return (
     <Box>
       <DeskBox>
         <Cgu href="./cgu.pdf" target="_blank">
           CGU
         </Cgu>
-
-        <Lien to="/">Contact</Lien>
-
-        <Lien to="/">Settings</Lien>
+        {idVideo && !idVid && <Music id={idVideo} />}
       </DeskBox>
       <MobilBox>
         <LienMob to="/">
