@@ -122,6 +122,9 @@ const Playlist = ({ changeVideo }) => {
     getPlay(location.state.item.snippet.channelTitle);
   }, []);
 
+  const regex = /&amp;/gi;
+  const clip = /clip officiel/gi;
+
   return (
     <Main>
       <Title>Playlist {location.state.item.snippet.channelTitle}</Title>
@@ -134,7 +137,13 @@ const Playlist = ({ changeVideo }) => {
             >
               <Thumbnail src={item.snippet.thumbnails.default.url} />
 
-              <P>{item.snippet.title}</P>
+              <P>
+                {item.snippet.title
+                  .replace(regex, "&")
+                  .replace(clip, " ")
+                  .replace(/\(|\)/g, "")
+                  .replace(/\[|\]/g, "")}
+              </P>
             </List>
           ))}
         </ListBloc>

@@ -9,7 +9,7 @@ const List = ({ changeVideo }) => {
 
   const location = useLocation();
 
-  const handleSearch = async (inputValue) => {
+  const handleSearch = async inputValue => {
     const myData = await getYoutube(inputValue);
     setItems(myData.items);
   };
@@ -19,11 +19,21 @@ const List = ({ changeVideo }) => {
       handleSearch(location.state.query);
     }
   }, [location.state.query]);
+
+  const regex = /&amp;/gi;
+  const clip = /clip officiel/gi;
+
   return (
     <div>
-      {items.map((item) => (
+      {items.map(item => (
         <div onClick={() => changeVideo(item)} key={item.id.videoId}>
-          <p>{item.snippet.title}</p>
+          <p>
+            {item.snippet.title
+              .replace(regex, "&")
+              .replace(clip, " ")
+              .replace(/\(|\)/g, "")
+              .replace(/\[|\]/g, "")}
+          </p>
 
           <img
             src={item.snippet.thumbnails.medium.url}

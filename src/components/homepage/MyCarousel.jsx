@@ -24,6 +24,9 @@ const MyCarousel = ({ category, changeVideo }) => {
     trend(category.searchValue);
   }, [category.searchValue]);
 
+  const regex = /&amp;/gi;
+  const clip = /clip officiel/gi;
+
   return (
     <Main>
       <Title>{category.title}</Title>
@@ -34,7 +37,13 @@ const MyCarousel = ({ category, changeVideo }) => {
               src={item.snippet.thumbnails.medium.url}
               alt={item.snippet.title}
             />
-            <SongTitles>{item.snippet.title}</SongTitles>
+            <SongTitles>
+              {item.snippet.title
+                .replace(regex, "&")
+                .replace(clip, " ")
+                .replace(/\(|\)/g, "")
+                .replace(/\[|\]/g, "")}
+            </SongTitles>
           </DivImg>
         ))}
       </Carousel>
