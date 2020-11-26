@@ -81,7 +81,6 @@ const Cgu = styled.a`
 `;
 
 const Footer = ({ idVideo, idVid }) => {
-  console.log(idVideo);
   return (
     <Box>
       <DeskBox>
