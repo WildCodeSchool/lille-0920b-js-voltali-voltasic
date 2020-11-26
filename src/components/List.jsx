@@ -4,18 +4,23 @@ import styled from "styled-components";
 import { getYoutube } from "../api/youtubeApiCall";
 
 const MainDiv = styled.div`
+  border: 1px solid red;
+  background-color: black;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 100%;
+  padding: 2%;
+  width: 95.8%;
   padding-top: 3%;
   flex-wrap: wrap;
 `;
 
 const MusicItem = styled.div`
+  background-color: black;
+  margin-left: 15%;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   align-items: center;
-  text-align: center;
+  justify-content: space-around;
   color: yellow;
   background: none;
   transition: 0.5s ease;
@@ -35,20 +40,43 @@ const MusicItem = styled.div`
     padding-right: 0%;
   }
   :hover {
-    transition: 0.5s ease;
-    transform: scale(1.1);
   }
 `;
 
+const Filter = styled.div`
+  border: 1px solid green;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  visibility: visible;
+`;
+
 const IMG = styled.img`
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: 1px solid red;
+  margin-top: 1%;
   width: inherit;
+  :hover {
+  }
+`;
+
+const Links = styled(Link)`
+  background-color: black;
 `;
 
 const Paragraph = styled.p`
+  background-color: black;
+  color: white;
   width: 50%;
+  margin-left: 20px;
 `;
 
 const H1 = styled.h1`
+  background-color: black;
   color: white;
   width: 50%;
   text-align: start;
@@ -59,7 +87,7 @@ const List = () => {
 
   const location = useLocation();
 
-  const handleSearch = async (inputValue) => {
+  const handleSearch = async inputValue => {
     const myData = await getYoutube(inputValue);
     setItems(myData.items);
   };
@@ -71,10 +99,11 @@ const List = () => {
   }, [location.state.query]);
   return (
     <MainDiv>
-      <H1>Results</H1>
-      {items.map((item) => (
+      <H1>Résultats</H1>
+
+      {items.map(item => (
         <MusicItem key={item.id.videoId}>
-          <Link
+          <Links
             to={{
               pathname: `/music/${item.id.videoId}`,
               state: { title: item.snippet.title },
@@ -84,7 +113,8 @@ const List = () => {
               src={item.snippet.thumbnails.medium.url}
               alt={item.snippet.title}
             />
-          </Link>
+            <Filter></Filter>
+          </Links>
           <Paragraph>{item.snippet.title}</Paragraph>
         </MusicItem>
       ))}
