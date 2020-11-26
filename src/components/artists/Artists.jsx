@@ -34,7 +34,7 @@ const TrendArtists = () => {
       <Title>Artistes du moment</Title>
       <Carousel breakPoints={breakPoints}>
         {data.map(item => (
-          <DivImg key={item.id.videoId}>
+          <DivImg>
             <Link
               to={{
                 pathname: `/playlist/${item.snippet.channelId}`,
