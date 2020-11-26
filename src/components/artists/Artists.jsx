@@ -27,6 +27,7 @@ const TrendArtists = () => {
   const Main = styled.div`
     padding-left: 1%;
     padding-right: 1%;
+    margin-bottom: 7%;
     @media screen and (max-width: 500px) {
       padding-top: 15%;
     }
@@ -43,7 +44,7 @@ const TrendArtists = () => {
     <Main>
       <Title>Artistes du moment</Title>
       <Carousel breakPoints={breakPoints}>
-        {data.map(item => (
+        {data.map((item) => (
           <DivImg key={item.id.videoId}>
             <Link
               to={{
