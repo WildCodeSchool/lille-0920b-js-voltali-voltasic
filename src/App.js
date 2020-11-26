@@ -33,7 +33,7 @@ const App = () => {
           render={() => <Playlist changeVideo={setIdVid} />}
         />
       </Switch>
-      {idVideo && <Music id={idVideo} />}
+      {idVideo && !idVid && <Music id={idVideo} />}
       <Footer />
     </div>
   );
