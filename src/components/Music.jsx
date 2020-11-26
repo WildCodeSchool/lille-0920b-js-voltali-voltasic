@@ -16,14 +16,14 @@ const Music = ({ id }) => {
   const handlePlayPause = () => {
     setPlaying(!playing);
   };
-  const handleVolume = (e) => {
+  const handleVolume = e => {
     setVolume(parseFloat(e.target.value));
   };
   const handleToggleLoop = () => {
     setLoop(!loop);
   };
 
-  const handleProgress = (state) => {
+  const handleProgress = state => {
     if (!seeking) {
       setPlayed(state.played);
     }
@@ -34,17 +34,27 @@ const Music = ({ id }) => {
   };
 
   const SongTitle = styled.h1`
+    border: 1px solid red;
     font-size: 15pt;
     color: white;
     margin-right: -15vw;
+    min-width: 45%;
     @media screen and (max-width: 450px) {
-      font-size: 7pt;
+      font-size: 10pt;
       margin-bottom: 1vh;
     }
   `;
   const I = styled.i`
     color: white;
     cursor: pointer;
+  `;
+
+  const IChevron = styled.i`
+    color: white;
+    cursor: pointer;
+    @media screen and (max-width: 800px) {
+      display: none;
+    }
   `;
 
   const Ino = styled.i`
@@ -72,21 +82,21 @@ const Music = ({ id }) => {
   `;
   const LabelLoop = styled.label`
     font-size: 2vh;
-    margin-left: 2%;
+    margin-left: 15%;
     font-size: 3vh;
   `;
 
   const LabelVolume = styled.label`
     font-size: 4vh;
     margin-left: 18%;
-    @media screen and (max-width: 450px) {
+    @media screen and (max-width: 800px) {
       display: none;
     }
   `;
   const Volume = styled.input`
     height: 3vh;
     margin-left: 3%;
-    @media screen and (max-width: 450px) {
+    @media screen and (max-width: 800px) {
       display: none;
     }
   `;
@@ -111,13 +121,16 @@ const Music = ({ id }) => {
 
   return (
     <div className="lecteur">
-      <SongTitle>
-        {id.snippet.title
-          .replace(regex, "&")
-          .replace(clip, " ")
-          .replace(/\(|\)/g, "")
-          .replace(/\[|\]/g, "")}
-      </SongTitle>
+      {!display && (
+        <SongTitle>
+          {id.snippet.title
+            .replace(regex, "&")
+            .replace(clip, " ")
+            .replace(/\(|\)/g, "")
+            .replace(/\[|\]/g, "")}
+        </SongTitle>
+      )}
+
       <ReactPlayer
         ref={inputRange}
         url={`https://www.youtube.com/watch?v=${id.id.videoId} `}
@@ -160,10 +173,10 @@ const Music = ({ id }) => {
           step="any"
           onChange={handleVolume}
         />
-        <I
+        <IChevron
           className={display ? "fas fa-chevron-up" : "fas fa-chevron-down"}
           onClick={handleDisplay}
-        ></I>
+        ></IChevron>
       </AjustButton>
     </div>
   );
