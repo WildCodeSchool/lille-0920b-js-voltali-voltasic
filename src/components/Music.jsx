@@ -117,6 +117,7 @@ const Music = ({ id }) => {
 
   const regex = /&amp;/gi;
   const clip = /clip officiel/gi;
+  const apo = /&#39;/gi;
 
   return (
     <div className="lecteur">
@@ -125,6 +126,7 @@ const Music = ({ id }) => {
           {id.snippet.title
             .replace(regex, "&")
             .replace(clip, " ")
+            .replace(apo, "'")
             .replace(/\(|\)/g, "")
             .replace(/\[|\]/g, "")}
         </SongTitle>
