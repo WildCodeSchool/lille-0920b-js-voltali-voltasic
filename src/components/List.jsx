@@ -91,7 +91,7 @@ const List = ({ changeVideo, setIdVid }) => {
 
   const location = useLocation();
 
-  const handleSearch = async inputValue => {
+  const handleSearch = async (inputValue) => {
     const myData = await getYoutube(inputValue);
     setItems(myData.items);
   };
@@ -104,8 +104,9 @@ const List = ({ changeVideo, setIdVid }) => {
 
   const regex = /&amp;/gi;
   const clip = /clip officiel/gi;
+  const apo = /&#39;/gi;
 
-  const play = item => {
+  const play = (item) => {
     changeVideo(item);
     setIdVid(false);
   };
@@ -113,7 +114,7 @@ const List = ({ changeVideo, setIdVid }) => {
   return (
     <MainDiv>
       <H1>Résultats pour {location.state.query}</H1>
-      {items.map(item => (
+      {items.map((item) => (
         <MusicItem onClick={() => play(item)} key={item.id.videoId}>
           <IMG
             src={item.snippet.thumbnails.medium.url}
@@ -123,6 +124,7 @@ const List = ({ changeVideo, setIdVid }) => {
             {item.snippet.title
               .replace(regex, "&")
               .replace(clip, " ")
+              .replace(apo, "'")
               .replace(/\(|\)/g, "")
               .replace(/\[|\]/g, "")}
           </Paragraph>
