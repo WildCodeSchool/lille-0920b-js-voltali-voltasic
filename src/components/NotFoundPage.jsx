@@ -10,6 +10,7 @@ const ErrorPage = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-bottom: 8%;
 `;
 
 const ButtonReturnHome = styled.button`
@@ -19,6 +20,7 @@ const ButtonReturnHome = styled.button`
   background: yellow;
   transition: 0.5s all ease-out;
   border: none;
+  cursor: pointer;
   :hover {
     background-color: white;
     color: black;
