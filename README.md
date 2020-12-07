@@ -1,4 +1,4 @@
-## #Voltasic
+#Voltasic
 
 ## Context
 
@@ -18,8 +18,8 @@ We used Scrum Method (Poker planning, Product Backlog, Sprint review). Each week
 
 ## Team members
 
-Sarah Sahraoui [github](https://github.com/Sarahshr)
-Thomas Mulhauser [github](https://github.com/ThomasMlh)
+Sarah Sahraoui [github](https://github.com/Sarahshr)  
+Thomas Mulhauser [github](https://github.com/ThomasMlh)  
 Francois-Xavier Colliot [github](https://github.com/Fx-Colliot)
 
 ## Features in developpment
